@@ -39,3 +39,10 @@ Docs: https://docs.expo.dev/eas/index.md
 - If `ios/` and `android/` directories do not exist, they are generated (Continuous Native Generation). Never create or edit them by hand — configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, the app needs a development build: `npx expo run:ios|android` locally, or `eas build --profile development`.
 - Prefer recommended Expo modules over third-party libraries, and check your available skills before adding dependencies. Docs: https://docs.expo.dev/versions/latest/index.md
+
+## Project notes (Padikkam)
+
+- Malayalam content must carry `register` and `provenance`. Never mark model-generated text as verified.
+- Keep `src/core` free of React Native imports so it stays testable in Node.
+- Run `npm test` and `npm run typecheck` before declaring work done.
+- This workspace cannot reach api.expo.dev, so `expo install` fails here. Read pinned versions from `node_modules/expo/bundledNativeModules.json`.

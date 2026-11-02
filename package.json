@@ -1,22 +1,32 @@
 {
   "name": "padikkam",
-  "version": "1.0.0",
-  "main": "index.ts",
+  "version": "0.1.0",
+  "main": "expo-router/entry",
   "dependencies": {
     "expo": "~58.0.22",
+    "expo-audio": "~58.0.11",
+    "expo-constants": "~58.0.14",
+    "expo-linking": "~58.0.15",
+    "expo-router": "~58.0.29",
+    "expo-sqlite": "~58.0.15",
     "expo-status-bar": "~58.0.4",
     "react": "19.3.0",
-    "react-native": "0.88.1"
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.10.1",
+    "react-native-screens": "~4.30.1",
+    "ts-fsrs": "^5.4.2"
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
   },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
-  "private": true
+  "private": true,
+  "license": "MIT"
 }
