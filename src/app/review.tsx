@@ -1,9 +1,15 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { SEED } from '../data/seed';
-import { getAllCardStates, saveCardState } from '../data/db';
-import { isDue, newCardState, review } from '../core/srs';
+import { buildReviewQueue } from '../core/review-queue';
+import { newCardState, review } from '../core/srs';
 import type { CardState, Entry, Grade } from '../core/types';
+import { AUDIO } from '../data/audio';
+import { getAllCardStates, saveCardState } from '../data/db';
+import { SEED } from '../data/seed';
+import { VOCAB } from '../data/vocab';
+import { useLetterAudio } from '../hooks/useLetterAudio';
+
+const DECK: Entry[] = [...SEED, ...VOCAB];
 
 const GRADES: { grade: Grade; label: string }[] = [
   { grade: 'again', label: 'Again' },
@@ -13,37 +19,50 @@ const GRADES: { grade: Grade; label: string }[] = [
 ];
 
 export default function Review() {
-  const [states, setStates] = useState<Map<string, CardState> | null>(null);
+  const { play } = useLetterAudio();
+  // The session's cards are chosen once, so the cap on new cards holds for the whole session.
+  const [queue, setQueue] = useState<Entry[] | null>(null);
+  const [states, setStates] = useState<Map<string, CardState>>(new Map());
   const [revealed, setRevealed] = useState(false);
+  // A fast double tap must not grade the same card twice (which would also skip the next one).
+  const grading = useRef(false);
 
   useEffect(() => {
-    getAllCardStates().then(setStates);
+    getAllCardStates()
+      .then((loaded) => {
+        setStates(loaded);
+        setQueue(buildReviewQueue(DECK, loaded, new Date()));
+      })
+      .catch((e) => {
+        console.warn('Could not load review state', e);
+        setQueue([]);
+      });
   }, []);
 
-  const queue = useMemo<Entry[]>(() => {
-    if (!states) return [];
-    const now = new Date();
-    return SEED.filter((e) => {
-      const s = states.get(e.id);
-      return !s || isDue(s, now);
-    });
-  }, [states]);
-
-  const current = queue[0];
+  const current = queue?.[0];
+  useEffect(() => {
+    grading.current = false; // a new card is on screen
+  }, [current]);
 
   const grade = useCallback(
     async (g: Grade) => {
-      if (!current || !states) return;
+      if (!current || grading.current) return;
+      grading.current = true;
       const prev = states.get(current.id) ?? newCardState(current.id);
       const next = review(prev, g);
-      await saveCardState(next);
       setStates(new Map(states).set(current.id, next));
+      setQueue((q) => (q ? q.slice(1) : q));
       setRevealed(false);
+      try {
+        await saveCardState(next);
+      } catch (e) {
+        console.warn('Could not save review', e);
+      }
     },
     [current, states],
   );
 
-  if (!states) return <View style={styles.center}><Text>Loading…</Text></View>;
+  if (!queue) return <View style={styles.center}><Text>Loading…</Text></View>;
   if (!current) {
     return (
       <View style={styles.center}>
@@ -52,9 +71,11 @@ export default function Review() {
     );
   }
 
+  const hasClip = !!current.audio && AUDIO[current.audio] !== undefined;
+
   return (
     <View style={styles.container}>
-      <Text style={styles.count}>{queue.length} due</Text>
+      <Text style={styles.count}>{`${queue.length} left`}</Text>
       <Pressable style={styles.card} onPress={() => setRevealed(true)}>
         <Text style={styles.ml}>{current.ml}</Text>
         <Text style={styles.badge}>{current.register}</Text>
@@ -62,6 +83,11 @@ export default function Review() {
           <>
             <Text style={styles.roman}>{current.roman}</Text>
             <Text style={styles.en}>{current.en}</Text>
+            {hasClip && (
+              <Pressable style={styles.play} onPress={() => play(current.id)}>
+                <Text style={styles.playText}>Play sound</Text>
+              </Pressable>
+            )}
           </>
         ) : (
           <Text style={styles.hint}>Tap to reveal</Text>
@@ -100,6 +126,8 @@ const styles = StyleSheet.create({
   roman: { fontSize: 24 },
   en: { fontSize: 18, opacity: 0.8, textAlign: 'center' },
   hint: { opacity: 0.5 },
+  play: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: '#222' },
+  playText: { color: '#fff', fontWeight: '600' },
   row: { flexDirection: 'row', gap: 8 },
   btn: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center' },
   btnText: { color: '#fff', fontWeight: '600' },

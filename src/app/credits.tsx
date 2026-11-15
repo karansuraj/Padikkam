@@ -1,16 +1,16 @@
 import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import manifest from '../../assets/audio/letters/manifest.json';
 import { summarizeCredits } from '../core/credits';
+import creditsData from '../data/audio-credits.json';
 
 interface Clip {
-  letter: string;
+  label: string;
   speaker: string;
   license: string;
   licenseUrl: string;
   sourcePage: string;
 }
 
-const clips = manifest as Clip[];
+const clips = creditsData as Clip[];
 const { speakers, licenses } = summarizeCredits(clips);
 
 const open = (url: string) => Linking.openURL(url).catch((e) => console.warn('Could not open link', e));
@@ -20,7 +20,7 @@ export default function Credits() {
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Audio credits</Text>
       <Text style={styles.body}>
-        {`Letter sounds recorded by ${speakers.join(', ')} for Lingua Libre and published on Wikimedia Commons.`}
+        {`Letter and word sounds recorded by ${speakers.join(', ')} for Lingua Libre and published on Wikimedia Commons.`}
       </Text>
       {licenses.map((l) => (
         <Pressable key={l.name} onPress={() => open(l.url)}>
@@ -32,8 +32,8 @@ export default function Credits() {
       </Text>
       <View style={styles.list}>
         {clips.map((c) => (
-          <Pressable key={c.letter} style={styles.row} onPress={() => open(c.sourcePage)}>
-            <Text style={styles.glyph}>{c.letter}</Text>
+          <Pressable key={`${c.label}|${c.sourcePage}`} style={styles.row} onPress={() => open(c.sourcePage)}>
+            <Text style={styles.glyph} numberOfLines={1}>{c.label}</Text>
             <View style={styles.rowText}>
               <Text style={styles.rowTitle}>{`${c.speaker}, ${c.license}`}</Text>
               <Text style={styles.link}>Source page on Wikimedia Commons</Text>
