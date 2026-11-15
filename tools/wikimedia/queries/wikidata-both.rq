@@ -1,0 +1,9 @@
+# Malayalam lexemes that have BOTH pronunciation audio and an English gloss. Count only.
+SELECT (COUNT(DISTINCT ?l) AS ?withAudioAndGloss) WHERE {
+  ?l dct:language wd:Q36236 ;
+     ontolex:lexicalForm ?f ;
+     ontolex:sense ?s .
+  ?f wdt:P443 ?a .
+  ?s skos:definition ?d .
+  FILTER(LANG(?d) = "en")
+}

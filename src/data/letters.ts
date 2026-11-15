@@ -73,7 +73,7 @@ const TABLE: [string, string, Group][] = [
   ['ള', 'La', 'consonants'],
   ['ഴ', 'zha', 'consonants'],
   ['റ', 'Ra', 'consonants'],
-  ['റ്റ', 'RRa', 'consonants'],
+  ['റ്റ', 'tta', 'consonants'],
   ['ഩ', 'nna', 'consonants'],
   ['ഺ', 'ttta', 'consonants'],
   // chillu letters (consonant with no vowel)

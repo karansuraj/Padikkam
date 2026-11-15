@@ -1,10 +1,11 @@
 import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-const ITEMS: { href: '/letters' | '/practice' | '/review' | '/credits'; title: string; sub: string }[] = [
+const ITEMS: { href: '/letters' | '/words' | '/practice' | '/review' | '/credits'; title: string; sub: string }[] = [
   { href: '/letters', title: 'Letters', sub: 'Learn the script, lesson by lesson, with audio' },
+  { href: '/words', title: 'Words', sub: 'Starter vocabulary by topic, with romanization and audio' },
   { href: '/practice', title: 'Practice', sub: 'Quiz yourself on letters that are due' },
-  { href: '/review', title: 'Review cards', sub: 'Flashcards from the starter deck' },
+  { href: '/review', title: 'Review cards', sub: 'Flashcards from the starter words' },
   { href: '/credits', title: 'Audio credits', sub: 'Who recorded the clips, and under what licence' },
 ];
 

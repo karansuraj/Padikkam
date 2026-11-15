@@ -1,0 +1,3179 @@
+[
+  {
+    "id": "L505310",
+    "ml": "പ്രണാമം",
+    "en": "greeting, pranama, salutation",
+    "topic": "greetings",
+    "audio": "words/L505310.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രണാമം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L552454",
+    "ml": "ക്ഷമ",
+    "en": "sorry, excuse",
+    "topic": "greetings",
+    "audio": "words/L552454.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ക്ഷമ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2437",
+    "ml": "ഞാൻ",
+    "en": "first person singular, I",
+    "topic": "pronouns",
+    "audio": "words/L2437.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഞാൻ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2438",
+    "ml": "നീ",
+    "en": "you, second person pronoun (informal, impolite) Used while talking to person of lower age or of same age, with equal social status. Not used against elder people",
+    "topic": "pronouns",
+    "audio": "words/L2438.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-നീ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L579875",
+    "ml": "എവിടെ",
+    "en": "where",
+    "topic": "pronouns",
+    "audio": "words/L579875.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എവിടെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L579872",
+    "ml": "ഇവിടെ",
+    "en": "here",
+    "topic": "pronouns",
+    "audio": "words/L579872.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇവിടെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L579873",
+    "ml": "അവിടെ",
+    "en": "there",
+    "topic": "pronouns",
+    "audio": "words/L579873.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അവിടെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L480",
+    "ml": "അമ്മ",
+    "en": "mother; A respectable term to address older women",
+    "topic": "family",
+    "audio": "words/L480.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അമ്മ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L486",
+    "ml": "അച്ഛൻ",
+    "en": "father",
+    "topic": "family",
+    "audio": "words/L486.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അച്ഛൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L563570",
+    "ml": "ആങ്ങള",
+    "en": "brother, when spoken of or to by her brother. Female's brother",
+    "topic": "family",
+    "audio": "words/L563570.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആങ്ങള.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L489",
+    "ml": "സഹോദരി",
+    "en": "female sibling, sister",
+    "topic": "family",
+    "audio": "words/L489.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സഹോദരി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L552730",
+    "ml": "അമ്മുമ്മ",
+    "en": "grandma, grandmother; old lady, aged woman",
+    "topic": "family",
+    "audio": "words/L552730.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അമ്മുമ്മ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L503595",
+    "ml": "മുത്തച്ഛൻ",
+    "en": "grandfather, grandpa, old man; old man, senior citizen",
+    "topic": "family",
+    "audio": "words/L503595.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-മുത്തച്ഛൻ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2436",
+    "ml": "മകൻ",
+    "en": "son",
+    "topic": "family",
+    "audio": "words/L2436.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മകൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2435",
+    "ml": "മകൾ",
+    "en": "daughter, female child",
+    "topic": "family",
+    "audio": "words/L2435.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-മകൾ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L578921",
+    "ml": "അമ്മാവൻ",
+    "en": "uncle",
+    "topic": "family",
+    "audio": "words/L578921.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അമ്മാവൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L528601",
+    "ml": "ചങ്ങാതി",
+    "en": "friend",
+    "topic": "family",
+    "audio": "words/L528601.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചങ്ങാതി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1116430",
+    "ml": "മാനവൻ",
+    "en": "Human; man",
+    "topic": "family",
+    "audio": "words/L1116430.wav",
+    "commonsFile": "LL-Q36236 (mal)-Netha Hussain-മാനവൻ.wav",
+    "speaker": "Netha Hussain"
+  },
+  {
+    "id": "L2583",
+    "ml": "സ്ത്രീ",
+    "en": "woman; female gender; adult female organism",
+    "topic": "family",
+    "audio": "words/L2583.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-സ്ത്രീ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L551264",
+    "ml": "ബന്ധു",
+    "en": "relative",
+    "topic": "family",
+    "audio": "words/L551264.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ബന്ധു.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L503673",
+    "ml": "ജ്യേഷ്ഠൻ",
+    "en": "elder brother",
+    "topic": "family",
+    "audio": "words/L503673.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ജ്യേഷ്ഠൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L503642",
+    "ml": "അനുജൻ",
+    "en": "younger brother",
+    "topic": "family",
+    "audio": "words/L503642.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അനുജൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L529552",
+    "ml": "ചേച്ചി",
+    "en": "elder sister",
+    "topic": "family",
+    "audio": "words/L529552.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചേച്ചി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2388",
+    "ml": "ഒന്ന്",
+    "en": "numeral for 1; one",
+    "topic": "numbers",
+    "audio": "words/L2388.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഒന്ന്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2389",
+    "ml": "രണ്ട്",
+    "en": "2, two; natural number between 1 and 3",
+    "topic": "numbers",
+    "audio": "words/L2389.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-രണ്ട്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2391",
+    "ml": "നാല്",
+    "en": "4; four, the numeral",
+    "topic": "numbers",
+    "audio": "words/L2391.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നാല്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2394",
+    "ml": "ഏഴ്",
+    "en": "numeral for 7; seven",
+    "topic": "numbers",
+    "audio": "words/L2394.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഏഴ്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2395",
+    "ml": "എട്ട്",
+    "en": "numeral for 8; eight",
+    "topic": "numbers",
+    "audio": "words/L2395.wav",
+    "commonsFile": "LL-Q36236 (mal)-Adithyak1997-എട്ട്.wav",
+    "speaker": "Adithyak1997"
+  },
+  {
+    "id": "L2396",
+    "ml": "ഒൻപത്",
+    "en": "numeral for 9; nine",
+    "topic": "numbers",
+    "audio": "words/L2396.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഒൻപത്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2397",
+    "ml": "പത്ത്",
+    "en": "numeral for 10; ten",
+    "topic": "numbers",
+    "audio": "words/L2397.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പത്ത്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2407",
+    "ml": "പതിനൊന്ന്",
+    "en": "11, eleven",
+    "topic": "numbers",
+    "audio": "words/L2407.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പതിനൊന്ന്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2408",
+    "ml": "പന്ത്രണ്ട്",
+    "en": "12, twelve",
+    "topic": "numbers",
+    "audio": "words/L2408.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പന്ത്രണ്ട്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2398",
+    "ml": "ഇരുപത്",
+    "en": "20, twenty",
+    "topic": "numbers",
+    "audio": "words/L2398.wav",
+    "commonsFile": "LL-Q36236 (mal)-Adithyak1997-ഇരുപത്.wav",
+    "speaker": "Adithyak1997"
+  },
+  {
+    "id": "L509396",
+    "ml": "ശതം",
+    "en": "100; hundred",
+    "topic": "numbers",
+    "audio": "words/L509396.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ശതം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L673520",
+    "ml": "ആദ്യം",
+    "en": "First",
+    "topic": "numbers",
+    "audio": "words/L673520.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആദ്യം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L677695",
+    "ml": "രണ്ടാം",
+    "en": "second; ordinal number for 2",
+    "topic": "numbers",
+    "audio": "words/L677695.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-രണ്ടാം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L411252",
+    "ml": "നിരവധി",
+    "en": "many; several",
+    "topic": "numbers",
+    "audio": "words/L411252.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നിരവധി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L689091",
+    "ml": "അപൂർവം",
+    "en": "rarely; few",
+    "topic": "numbers",
+    "audio": "words/L689091.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അപൂർവം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L583928",
+    "ml": "എല്ലാ",
+    "en": "all",
+    "topic": "numbers",
+    "audio": "words/L583928.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എല്ലാ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L411281",
+    "ml": "ചില",
+    "en": "some",
+    "topic": "numbers",
+    "audio": "words/L411281.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചില.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1503",
+    "ml": "വെള്ളം",
+    "en": "water; water for dinking",
+    "topic": "food",
+    "audio": "words/L1503.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വെള്ളം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458448",
+    "ml": "പാൽ",
+    "en": "milk; white liquid produced by the mammary glands of mammals",
+    "topic": "food",
+    "audio": "words/L458448.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പാൽ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L579702",
+    "ml": "ചായ",
+    "en": "tea; cup of tea; to have snack",
+    "topic": "food",
+    "audio": "words/L579702.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചായ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L42302",
+    "ml": "മീൻ",
+    "en": "fish; fish as food",
+    "topic": "food",
+    "audio": "words/L42302.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മീൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1587",
+    "ml": "കായ്",
+    "en": "unripe fruit; unripe plantain banana; fruit, part of a flowering plant",
+    "topic": "food",
+    "audio": "words/L1587.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കായ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1584",
+    "ml": "പഴം",
+    "en": "culinary fruit; ripe fruit; fruit; part of a flowering plant; banana",
+    "topic": "food",
+    "audio": "words/L1584.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പഴം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300798",
+    "ml": "ഉപ്പ്",
+    "en": "salt, common salt, edible salt; salty taste; chemcial salt, salt product formed when acid and base react",
+    "topic": "food",
+    "audio": "words/L300798.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഉപ്പ്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L549223",
+    "ml": "നെയ്യ്",
+    "en": "ghee, from animal milk, especially cow; animal fat",
+    "topic": "food",
+    "audio": "words/L549223.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നെയ്യ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459096",
+    "ml": "കടിക്കുക",
+    "en": "to bite; to snack; snacking; (intransitve) to itch; due to rash; mosquito bite; to bite by closing jaws (humans and animals); to attack someone; to hurt (animalistically); to take bait; bite of snake; snakebite",
+    "topic": "food",
+    "audio": "words/L459096.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കടിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L455966",
+    "ml": "നാരങ്ങ",
+    "en": "lime; a fruit; lemon; orange; any citrus fruit in general",
+    "topic": "food",
+    "audio": "words/L455966.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നാരങ്ങ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L42304",
+    "ml": "ചക്ക",
+    "en": "Jackfruit",
+    "topic": "food",
+    "audio": "words/L42304.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചക്ക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L547080",
+    "ml": "കിഴങ്ങ്",
+    "en": "tuber",
+    "topic": "food",
+    "audio": "words/L547080.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കിഴങ്ങ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L563382",
+    "ml": "ഉലുവ",
+    "en": "Fenugreek; Fenugreek seeds",
+    "topic": "food",
+    "audio": "words/L563382.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉലുവ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2528",
+    "ml": "മൈലാഞ്ചി",
+    "en": "Henna; dye",
+    "topic": "food",
+    "audio": "words/L2528.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-മൈലാഞ്ചി.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L1126323",
+    "ml": "തുളസി",
+    "en": "Basil",
+    "topic": "food",
+    "audio": "words/L1126323.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-തുളസി.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L685329",
+    "ml": "ചങ്ക്",
+    "en": "heart; chest; a very close friend",
+    "topic": "body",
+    "audio": "words/L685329.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചങ്ക്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L507327",
+    "ml": "ദന്തം",
+    "en": "tooth",
+    "topic": "body",
+    "audio": "words/L507327.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദന്തം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L559980",
+    "ml": "വിരൽ",
+    "en": "finger",
+    "topic": "body",
+    "audio": "words/L559980.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിരൽ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L548459",
+    "ml": "കഴുത്ത്",
+    "en": "neck",
+    "topic": "body",
+    "audio": "words/L548459.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കഴുത്ത്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L529279",
+    "ml": "തൊലി",
+    "en": "skin; bark of a tree; peel of fruit or vegetable",
+    "topic": "body",
+    "audio": "words/L529279.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തൊലി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L562651",
+    "ml": "ചോര",
+    "en": "blood; genetic heredity",
+    "topic": "body",
+    "audio": "words/L562651.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചോര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300796",
+    "ml": "അസ്ഥി",
+    "en": "bone, rigid organs that constitute part of the endoskeleton of vertebrates",
+    "topic": "body",
+    "audio": "words/L300796.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അസ്ഥി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413210",
+    "ml": "മെയ്",
+    "en": "body",
+    "topic": "body",
+    "audio": "words/L413210.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മെയ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L559121",
+    "ml": "മുല",
+    "en": "breast, region of the torso of a primate containing the mammary gland",
+    "topic": "body",
+    "audio": "words/L559121.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മുല.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L3177",
+    "ml": "നെഞ്ച്",
+    "en": "chest; (figuratively) mind",
+    "topic": "body",
+    "audio": "words/L3177.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നെഞ്ച്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505007",
+    "ml": "കക്ഷം",
+    "en": "armpit",
+    "topic": "body",
+    "audio": "words/L505007.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കക്ഷം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L551600",
+    "ml": "പുര",
+    "en": "house",
+    "topic": "home",
+    "audio": "words/L551600.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പുര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L40193",
+    "ml": "കട്ടിൽ",
+    "en": "cot, bed",
+    "topic": "home",
+    "audio": "words/L40193.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കട്ടിൽ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413634",
+    "ml": "വെളിച്ചം",
+    "en": "light",
+    "topic": "home",
+    "audio": "words/L413634.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വെളിച്ചം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505124",
+    "ml": "പൂന്തോട്ടം",
+    "en": "garden",
+    "topic": "home",
+    "audio": "words/L505124.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പൂന്തോട്ടം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300756",
+    "ml": "തീ",
+    "en": "fire; rapid oxidation of a material",
+    "topic": "home",
+    "audio": "words/L300756.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തീ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1508",
+    "ml": "വഴി",
+    "en": "way; route; road; (figuratively) solution",
+    "topic": "places",
+    "audio": "words/L1508.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വഴി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L504695",
+    "ml": "ചികിത്സാലയം",
+    "en": "hospital",
+    "topic": "places",
+    "audio": "words/L504695.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചികിത്സാലയം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L528334",
+    "ml": "ചന്ത",
+    "en": "market; mechanisms whereby supply and demand confront each other and deals are made, involving places, processes and institutions in which exchanges occur (for physical venues, use Q132510 or Q330284)",
+    "topic": "places",
+    "audio": "words/L528334.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചന്ത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413807",
+    "ml": "പട്ടണം",
+    "en": "town; settlement that is smaller than a city but bigger than a large village (or borough in some areas)",
+    "topic": "places",
+    "audio": "words/L413807.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പട്ടണം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L580408",
+    "ml": "അമ്പലം",
+    "en": "temple, place of worship for Hindusism",
+    "topic": "places",
+    "audio": "words/L580408.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അമ്പലം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L563220",
+    "ml": "സ്കൂൾ",
+    "en": "school",
+    "topic": "places",
+    "audio": "words/L563220.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സ്കൂൾ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L40160",
+    "ml": "പുഴ",
+    "en": "river",
+    "topic": "places",
+    "audio": "words/L40160.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പുഴ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L1494",
+    "ml": "കടൽ",
+    "en": "sea",
+    "topic": "places",
+    "audio": "words/L1494.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കടൽ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1513",
+    "ml": "തീരം",
+    "en": "beach; shore",
+    "topic": "places",
+    "audio": "words/L1513.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തീരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L454678",
+    "ml": "കുന്ന്",
+    "en": "hill; landform that extends above the surrounding terrain",
+    "topic": "places",
+    "audio": "words/L454678.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കുന്ന്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300789",
+    "ml": "വനം",
+    "en": "Forest; dense collection of trees covering a relatively large area",
+    "topic": "places",
+    "audio": "words/L300789.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L454823",
+    "ml": "ദ്വീപ്",
+    "en": "island; sub-continental land that is surrounded by water",
+    "topic": "places",
+    "audio": "words/L454823.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദ്വീപ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1037094",
+    "ml": "കോട്ട",
+    "en": "Fort",
+    "topic": "places",
+    "audio": "words/L1037094.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കോട്ട.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L42054",
+    "ml": "ഗ്രന്ഥശാല",
+    "en": "library",
+    "topic": "places",
+    "audio": "words/L42054.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഗ്രന്ഥശാല.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1540",
+    "ml": "രാജ്യം",
+    "en": "country; kingdom; state",
+    "topic": "places",
+    "audio": "words/L1540.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-രാജ്യം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505409",
+    "ml": "ഉലകം",
+    "en": "world",
+    "topic": "places",
+    "audio": "words/L505409.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉലകം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413319",
+    "ml": "ഇടം",
+    "en": "a space to occupy, place",
+    "topic": "places",
+    "audio": "words/L413319.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇടം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L455726",
+    "ml": "ഭൂപടം",
+    "en": "map; a visual representation of a geographical area",
+    "topic": "places",
+    "audio": "words/L455726.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഭൂപടം.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L505177",
+    "ml": "ദിനം",
+    "en": "day",
+    "topic": "time",
+    "audio": "words/L505177.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദിനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L549610",
+    "ml": "ഇരവ്",
+    "en": "night",
+    "topic": "time",
+    "audio": "words/L549610.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇരവ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413440",
+    "ml": "പ്രഭാതം",
+    "en": "morning, dawn",
+    "topic": "time",
+    "audio": "words/L413440.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രഭാതം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L508122",
+    "ml": "അപരാഹ്നം",
+    "en": "afternoon",
+    "topic": "time",
+    "audio": "words/L508122.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അപരാഹ്നം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L580002",
+    "ml": "ഇന്ന്",
+    "en": "today; this day",
+    "topic": "time",
+    "audio": "words/L580002.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇന്ന്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L580005",
+    "ml": "ഇന്നലെ",
+    "en": "yesterday",
+    "topic": "time",
+    "audio": "words/L580005.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇന്നലെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1476",
+    "ml": "സമയം",
+    "en": "Time; a particular point in or stretch of time (S1)",
+    "topic": "time",
+    "audio": "words/L1476.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സമയം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458101",
+    "ml": "ആഴ്ച",
+    "en": "week, unit of time",
+    "topic": "time",
+    "audio": "words/L458101.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ആഴ്ച.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L547648",
+    "ml": "ആണ്ട്",
+    "en": "year; ritual for death anniversary",
+    "topic": "time",
+    "audio": "words/L547648.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആണ്ട്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L673494",
+    "ml": "ഇപ്പോൾ",
+    "en": "now",
+    "topic": "time",
+    "audio": "words/L673494.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇപ്പോൾ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L583881",
+    "ml": "പിന്നീട്",
+    "en": "later; on a later time",
+    "topic": "time",
+    "audio": "words/L583881.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പിന്നീട്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L686082",
+    "ml": "നിത്യം",
+    "en": "always; constantly",
+    "topic": "time",
+    "audio": "words/L686082.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നിത്യം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527959",
+    "ml": "തിങ്കളാഴ്ച",
+    "en": "Monday",
+    "topic": "time",
+    "audio": "words/L527959.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തിങ്കളാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527960",
+    "ml": "ചൊവ്വാഴ്ച",
+    "en": "Tuesday",
+    "topic": "time",
+    "audio": "words/L527960.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചൊവ്വാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2602",
+    "ml": "ബുധനാഴ്ച",
+    "en": "Wednesday",
+    "topic": "time",
+    "audio": "words/L2602.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ബുധനാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527958",
+    "ml": "വ്യാഴാഴ്ച",
+    "en": "Thursday",
+    "topic": "time",
+    "audio": "words/L527958.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വ്യാഴാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527956",
+    "ml": "വെള്ളിയാഴ്ച",
+    "en": "Friday",
+    "topic": "time",
+    "audio": "words/L527956.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വെള്ളിയാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527955",
+    "ml": "ശനിയാഴ്ച",
+    "en": "Saturday",
+    "topic": "time",
+    "audio": "words/L527955.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ശനിയാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527957",
+    "ml": "ഞായറാഴ്ച",
+    "en": "Sunday, day of the week",
+    "topic": "time",
+    "audio": "words/L527957.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഞായറാഴ്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L689217",
+    "ml": "കഴിഞ്ഞ",
+    "en": "past; previous; completed; already over",
+    "topic": "time",
+    "audio": "words/L689217.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കഴിഞ്ഞ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L679222",
+    "ml": "ഉച്ച",
+    "en": "noon; loudness",
+    "topic": "time",
+    "audio": "words/L679222.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉച്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1125023",
+    "ml": "വാരാന്ത്യം",
+    "en": "Weekend",
+    "topic": "time",
+    "audio": "words/L1125023.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-വാരാന്ത്യം.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L677645",
+    "ml": "സമീപകാല",
+    "en": "recent",
+    "topic": "time",
+    "audio": "words/L677645.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സമീപകാല.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413849",
+    "ml": "അടുത്ത",
+    "en": "next",
+    "topic": "time",
+    "audio": "words/L413849.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അടുത്ത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L688141",
+    "ml": "അവസാന",
+    "en": "last; final",
+    "topic": "time",
+    "audio": "words/L688141.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അവസാന.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L616847",
+    "ml": "എന്നിട്ട്",
+    "en": "then",
+    "topic": "time",
+    "audio": "words/L616847.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എന്നിട്ട്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1101731",
+    "ml": "പൊടുന്നനെ",
+    "en": "suddenly",
+    "topic": "time",
+    "audio": "words/L1101731.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പൊടുന്നനെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L689766",
+    "ml": "ദ്രുതം",
+    "en": "quickly",
+    "topic": "time",
+    "audio": "words/L689766.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദ്രുതം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L447381",
+    "ml": "പതുക്കെ",
+    "en": "slowly",
+    "topic": "time",
+    "audio": "words/L447381.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പതുക്കെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L464888",
+    "ml": "സന്തതം",
+    "en": "continuously",
+    "topic": "time",
+    "audio": "words/L464888.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സന്തതം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L673492",
+    "ml": "എന്തായാലും",
+    "en": "anyway",
+    "topic": "time",
+    "audio": "words/L673492.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എന്തായാലും.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L464915",
+    "ml": "കറുത്ത",
+    "en": "black",
+    "topic": "colours",
+    "audio": "words/L464915.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കറുത്ത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L688129",
+    "ml": "ഹരിത",
+    "en": "green",
+    "topic": "colours",
+    "audio": "words/L688129.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഹരിത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413309",
+    "ml": "സ്വർണം",
+    "en": "gold, chemical element with symbol Au and atomic number 79",
+    "topic": "colours",
+    "audio": "words/L413309.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സ്വർണം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L529501",
+    "ml": "വെള്ളി",
+    "en": "silver, chemical element with atomic number 47",
+    "topic": "colours",
+    "audio": "words/L529501.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വെള്ളി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L503699",
+    "ml": "ആദിത്യൻ",
+    "en": "sun",
+    "topic": "nature",
+    "audio": "words/L503699.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആദിത്യൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2569",
+    "ml": "ചന്ദ്രൻ",
+    "en": "moon",
+    "topic": "nature",
+    "audio": "words/L2569.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചന്ദ്രൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2558",
+    "ml": "ആകാശം",
+    "en": "Sky; everything that is above the surface of the Earth",
+    "topic": "nature",
+    "audio": "words/L2558.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആകാശം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L560433",
+    "ml": "മുകിൽ",
+    "en": "cloud; black clouds; rain cloud",
+    "topic": "nature",
+    "audio": "words/L560433.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മുകിൽ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2606",
+    "ml": "കാറ്റ്",
+    "en": "wind; flow of gases or air on a large scale",
+    "topic": "nature",
+    "audio": "words/L2606.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-കാറ്റ്.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L2622",
+    "ml": "മരം",
+    "en": "tree; wooden material",
+    "topic": "nature",
+    "audio": "words/L2622.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2557",
+    "ml": "പുഷ്പം",
+    "en": "flower",
+    "topic": "nature",
+    "audio": "words/L2557.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പുഷ്പം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L525866",
+    "ml": "ചപ്പ്",
+    "en": "leaf; dry leaf, dead leaf",
+    "topic": "nature",
+    "audio": "words/L525866.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചപ്പ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L455877",
+    "ml": "മല",
+    "en": "Mountain",
+    "topic": "nature",
+    "audio": "words/L455877.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മല.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L221619",
+    "ml": "മൃഗം",
+    "en": "an animal",
+    "topic": "nature",
+    "audio": "words/L221619.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മൃഗം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1433",
+    "ml": "പക്ഷി",
+    "en": "bird",
+    "topic": "nature",
+    "audio": "words/L1433.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പക്ഷി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L549152",
+    "ml": "നായ്",
+    "en": "dog",
+    "topic": "nature",
+    "audio": "words/L549152.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നായ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413196",
+    "ml": "ആന",
+    "en": "Elephant",
+    "topic": "nature",
+    "audio": "words/L413196.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ആന.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L413274",
+    "ml": "കുതിര",
+    "en": "horse; Chess piece. Knight",
+    "topic": "nature",
+    "audio": "words/L413274.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കുതിര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413430",
+    "ml": "സർപ്പം",
+    "en": "snake",
+    "topic": "nature",
+    "audio": "words/L413430.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സർപ്പം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L228398",
+    "ml": "കടുവ",
+    "en": "tiger",
+    "topic": "nature",
+    "audio": "words/L228398.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-കടുവ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L505813",
+    "ml": "ഷഡ്പദം",
+    "en": "insect",
+    "topic": "nature",
+    "audio": "words/L505813.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഷഡ്പദം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413212",
+    "ml": "മഞ്ഞ്",
+    "en": "snow; mist",
+    "topic": "nature",
+    "audio": "words/L413212.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മഞ്ഞ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2529",
+    "ml": "ചെടി",
+    "en": "plant",
+    "topic": "nature",
+    "audio": "words/L2529.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചെടി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300890",
+    "ml": "മുയൽ",
+    "en": "rabbit; species of small mammals (Leporidae)",
+    "topic": "nature",
+    "audio": "words/L300890.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-മുയൽ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L507444",
+    "ml": "സൂകരം",
+    "en": "pig",
+    "topic": "nature",
+    "audio": "words/L507444.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സൂകരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L563605",
+    "ml": "തവള",
+    "en": "Frog, chiefly in the grass",
+    "topic": "nature",
+    "audio": "words/L563605.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തവള.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1432",
+    "ml": "കാക്ക",
+    "en": "crow",
+    "topic": "nature",
+    "audio": "words/L1432.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-കാക്ക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L507452",
+    "ml": "മയൂരം",
+    "en": "peacock, a type of bird",
+    "topic": "nature",
+    "audio": "words/L507452.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മയൂരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413179",
+    "ml": "തത്ത",
+    "en": "Parrot",
+    "topic": "nature",
+    "audio": "words/L413179.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-തത്ത.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L456016",
+    "ml": "താറാവ്",
+    "en": "duck; common name for many species in the bird family Anatidae",
+    "topic": "nature",
+    "audio": "words/L456016.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-താറാവ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505234",
+    "ml": "ഋഷഭം",
+    "en": "bull",
+    "topic": "nature",
+    "audio": "words/L505234.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഋഷഭം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L501821",
+    "ml": "മൂർഖൻ",
+    "en": "cobra; venomous snake",
+    "topic": "nature",
+    "audio": "words/L501821.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-മൂർഖൻ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L501804",
+    "ml": "കൊക്ക്",
+    "en": "egret; a bird; heron",
+    "topic": "nature",
+    "audio": "words/L501804.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കൊക്ക്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L580729",
+    "ml": "പാറ",
+    "en": "rock",
+    "topic": "nature",
+    "audio": "words/L580729.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പാറ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1482",
+    "ml": "ഭൂമി",
+    "en": "planet Earth; Land",
+    "topic": "nature",
+    "audio": "words/L1482.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഭൂമി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L506167",
+    "ml": "സാഗരം",
+    "en": "ocean",
+    "topic": "nature",
+    "audio": "words/L506167.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സാഗരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L454792",
+    "ml": "താഴ്വര",
+    "en": "valley; low area between hills, often with a river running through it",
+    "topic": "nature",
+    "audio": "words/L454792.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-താഴ്വര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L551058",
+    "ml": "കൊടുങ്കാറ്റ്",
+    "en": "storm",
+    "topic": "nature",
+    "audio": "words/L551058.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കൊടുങ്കാറ്റ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300818",
+    "ml": "ചിറക്",
+    "en": "wing; wing of a bird",
+    "topic": "nature",
+    "audio": "words/L300818.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചിറക്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L548905",
+    "ml": "കുളമ്പ്",
+    "en": "hoof",
+    "topic": "nature",
+    "audio": "words/L548905.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കുളമ്പ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1605",
+    "ml": "ധാന്യം",
+    "en": "grain",
+    "topic": "nature",
+    "audio": "words/L1605.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ധാന്യം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413683",
+    "ml": "യവം",
+    "en": "barley",
+    "topic": "nature",
+    "audio": "words/L413683.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-യവം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L479854",
+    "ml": "പരിപ്പ്",
+    "en": "lentils; dal; dal dish",
+    "topic": "nature",
+    "audio": "words/L479854.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പരിപ്പ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413846",
+    "ml": "പോകുക",
+    "en": "to go, move, change location; to move away, going away",
+    "topic": "verbs",
+    "audio": "words/L413846.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പോകുക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L462104",
+    "ml": "പോരുക",
+    "en": "to come",
+    "topic": "verbs",
+    "audio": "words/L462104.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പോരുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458220",
+    "ml": "കഴിക്കുക",
+    "en": "to cause to complete, finish; to eat; to marry",
+    "topic": "verbs",
+    "audio": "words/L458220.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കഴിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458372",
+    "ml": "കുടിക്കുക",
+    "en": "to drink",
+    "topic": "verbs",
+    "audio": "words/L458372.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കുടിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L42307",
+    "ml": "ഉറങ്ങുക",
+    "en": "to sleep",
+    "topic": "verbs",
+    "audio": "words/L42307.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉറങ്ങുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458209",
+    "ml": "കാണുക",
+    "en": "to see; to perceive",
+    "topic": "verbs",
+    "audio": "words/L458209.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കാണുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458347",
+    "ml": "ശബ്ദിക്കുക",
+    "en": "To speak, to utter",
+    "topic": "verbs",
+    "audio": "words/L458347.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ശബ്ദിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458297",
+    "ml": "ആഗ്രഹിക്കുക",
+    "en": "to desire, want",
+    "topic": "verbs",
+    "audio": "words/L458297.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആഗ്രഹിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458180",
+    "ml": "നൽകുക",
+    "en": "to give",
+    "topic": "verbs",
+    "audio": "words/L458180.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നൽകുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L477456",
+    "ml": "എടുക്കുക",
+    "en": "to take, carry, pick up; to capture, take possession; pick up, hold above from surface; to carry; to take photo, shoot",
+    "topic": "verbs",
+    "audio": "words/L477456.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എടുക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458325",
+    "ml": "വാങ്ങുക",
+    "en": "to buy",
+    "topic": "verbs",
+    "audio": "words/L458325.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വാങ്ങുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459080",
+    "ml": "വിൽക്കുക",
+    "en": "to sell",
+    "topic": "verbs",
+    "audio": "words/L459080.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിൽക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L578370",
+    "ml": "നിൽക്കുക",
+    "en": "to stand",
+    "topic": "verbs",
+    "audio": "words/L578370.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നിൽക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413868",
+    "ml": "നടക്കുക",
+    "en": "to walk",
+    "topic": "verbs",
+    "audio": "words/L413868.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-നടക്കുക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L413823",
+    "ml": "ഓടുക",
+    "en": "run",
+    "topic": "verbs",
+    "audio": "words/L413823.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ഓടുക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L413829",
+    "ml": "പഠിക്കുക",
+    "en": "study, learn",
+    "topic": "verbs",
+    "audio": "words/L413829.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പഠിക്കുക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L413845",
+    "ml": "എഴുതുക",
+    "en": "to write",
+    "topic": "verbs",
+    "audio": "words/L413845.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-എഴുതുക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L458317",
+    "ml": "ജീവിക്കുക",
+    "en": "to live; to be alive",
+    "topic": "verbs",
+    "audio": "words/L458317.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ജീവിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459023",
+    "ml": "ചിരിക്കുക",
+    "en": "to laugh; to smile",
+    "topic": "verbs",
+    "audio": "words/L459023.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചിരിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458214",
+    "ml": "പിടിക്കുക",
+    "en": "to catch; to hold; to like; have approval; agree with; capture, sieze; get affected, infected by (disease, etc.); to limit, grip, have hold of; To grip",
+    "topic": "verbs",
+    "audio": "words/L458214.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പിടിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L42311",
+    "ml": "അടയ്ക്കുക",
+    "en": "to close,",
+    "topic": "verbs",
+    "audio": "words/L42311.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അടയ്ക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458242",
+    "ml": "തുടങ്ങുക",
+    "en": "to begin, start",
+    "topic": "verbs",
+    "audio": "words/L458242.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തുടങ്ങുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458224",
+    "ml": "വയ്ക്കുക",
+    "en": "to put on surface; to let it be, keep; to keep hold of, possession; to cook in boiling water",
+    "topic": "verbs",
+    "audio": "words/L458224.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വയ്ക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458868",
+    "ml": "പാടുക",
+    "en": "to sing",
+    "topic": "verbs",
+    "audio": "words/L458868.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പാടുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459299",
+    "ml": "ഉടുക്കുക",
+    "en": "wear",
+    "topic": "verbs",
+    "audio": "words/L459299.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉടുക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458302",
+    "ml": "വലിക്കുക",
+    "en": "to pull; to smoke cigarette; to wheeze during fever",
+    "topic": "verbs",
+    "audio": "words/L458302.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വലിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458867",
+    "ml": "തകരുക",
+    "en": "Break",
+    "topic": "verbs",
+    "audio": "words/L458867.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തകരുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458222",
+    "ml": "വീഴുക",
+    "en": "to fall; to be in ruins; to fall for something",
+    "topic": "verbs",
+    "audio": "words/L458222.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വീഴുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458856",
+    "ml": "പഠിപ്പിക്കുക",
+    "en": "to teach",
+    "topic": "verbs",
+    "audio": "words/L458856.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പഠിപ്പിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458201",
+    "ml": "കാണിക്കുക",
+    "en": "to show; to display",
+    "topic": "verbs",
+    "audio": "words/L458201.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കാണിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458203",
+    "ml": "നോക്കുക",
+    "en": "to look; to search; to wait for arrival of someone or something; to look after",
+    "topic": "verbs",
+    "audio": "words/L458203.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നോക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458839",
+    "ml": "ആകുക",
+    "en": "to become",
+    "topic": "verbs",
+    "audio": "words/L458839.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആകുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L543804",
+    "ml": "ആക്കുക",
+    "en": "to make",
+    "topic": "verbs",
+    "audio": "words/L543804.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458179",
+    "ml": "ചെയ്യുക",
+    "en": "do, to perform",
+    "topic": "verbs",
+    "audio": "words/L458179.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചെയ്യുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459394",
+    "ml": "നീന്തുക",
+    "en": "to swim",
+    "topic": "verbs",
+    "audio": "words/L459394.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നീന്തുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458934",
+    "ml": "പിന്തുടരുക",
+    "en": "to follow; to follow, practice or observe a convention, ritual or method",
+    "topic": "verbs",
+    "audio": "words/L458934.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പിന്തുടരുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L593913",
+    "ml": "പോരടിക്കുക",
+    "en": "to fight",
+    "topic": "verbs",
+    "audio": "words/L593913.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പോരടിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300825",
+    "ml": "എറിയുക",
+    "en": "to throw",
+    "topic": "verbs",
+    "audio": "words/L300825.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എറിയുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458240",
+    "ml": "സ്വീകരിക്കുക",
+    "en": "to receive, accept; to welcome someone",
+    "topic": "verbs",
+    "audio": "words/L458240.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സ്വീകരിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459386",
+    "ml": "സന്ദർശിക്കുക",
+    "en": "to visit",
+    "topic": "verbs",
+    "audio": "words/L459386.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സന്ദർശിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L481579",
+    "ml": "സമ്മതിക്കുക",
+    "en": "to agree",
+    "topic": "verbs",
+    "audio": "words/L481579.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സമ്മതിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458249",
+    "ml": "കൊല്ലുക",
+    "en": "to kill",
+    "topic": "verbs",
+    "audio": "words/L458249.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കൊല്ലുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459097",
+    "ml": "കത്തുക",
+    "en": "to burn; combust",
+    "topic": "verbs",
+    "audio": "words/L459097.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കത്തുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459195",
+    "ml": "പണിയുക",
+    "en": "to build",
+    "topic": "verbs",
+    "audio": "words/L459195.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പണിയുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459021",
+    "ml": "എണ്ണുക",
+    "en": "to count",
+    "topic": "verbs",
+    "audio": "words/L459021.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എണ്ണുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458207",
+    "ml": "ഉണ്ടാക്കുക",
+    "en": "to create; to bring into existence; to make; to fabricate",
+    "topic": "verbs",
+    "audio": "words/L458207.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉണ്ടാക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458269",
+    "ml": "കണ്ടുപിടിക്കുക",
+    "en": "to discover; to find out",
+    "topic": "verbs",
+    "audio": "words/L458269.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കണ്ടുപിടിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L678739",
+    "ml": "ചുറ്റുക",
+    "en": "to rotate; to wrap around; to tie; to roam around; sightseeing",
+    "topic": "verbs",
+    "audio": "words/L678739.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചുറ്റുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459478",
+    "ml": "തേയ്ക്കുക",
+    "en": "to rub; apply; to iron clothes; to coat with cement; to brush teeth; to smear, spread, plaster",
+    "topic": "verbs",
+    "audio": "words/L459478.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തേയ്ക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458987",
+    "ml": "നിലവിളിക്കുക",
+    "en": "to scream, to cry aloud",
+    "topic": "verbs",
+    "audio": "words/L458987.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നിലവിളിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L588284",
+    "ml": "തിരഞ്ഞെടുക്കുക",
+    "en": "to select; choose; elect",
+    "topic": "verbs",
+    "audio": "words/L588284.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തിരഞ്ഞെടുക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458850",
+    "ml": "ചുരുങ്ങുക",
+    "en": "to shrink",
+    "topic": "verbs",
+    "audio": "words/L458850.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചുരുങ്ങുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459667",
+    "ml": "കക്കുക",
+    "en": "to vomit, puke; to steal",
+    "topic": "verbs",
+    "audio": "words/L459667.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458371",
+    "ml": "അലറുക",
+    "en": "to scream; cry loudly; to shout; To roar, bellow",
+    "topic": "verbs",
+    "audio": "words/L458371.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അലറുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458241",
+    "ml": "പെരുമാറുക",
+    "en": "Behave",
+    "topic": "verbs",
+    "audio": "words/L458241.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പെരുമാറുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459044",
+    "ml": "പരിഗണിക്കുക",
+    "en": "to consider; to regard",
+    "topic": "verbs",
+    "audio": "words/L459044.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പരിഗണിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L482899",
+    "ml": "ഉൾപ്പെടുത്തുക",
+    "en": "Include",
+    "topic": "verbs",
+    "audio": "words/L482899.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉൾപ്പെടുത്തുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458817",
+    "ml": "വിലക്കുക",
+    "en": "restrict",
+    "topic": "verbs",
+    "audio": "words/L458817.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിലക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459083",
+    "ml": "വിരമിക്കുക",
+    "en": "Retire",
+    "topic": "verbs",
+    "audio": "words/L459083.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിരമിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L464261",
+    "ml": "പതുക്കുക",
+    "en": "renew",
+    "topic": "verbs",
+    "audio": "words/L464261.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പതുക്കുക.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L477445",
+    "ml": "കുറയ്ക്കുക",
+    "en": "reduce, subtract, decrease; (maths) subtract",
+    "topic": "verbs",
+    "audio": "words/L477445.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കുറയ്ക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459218",
+    "ml": "ആശംസിക്കുക",
+    "en": "to wish, bless, send greetings",
+    "topic": "verbs",
+    "audio": "words/L459218.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആശംസിക്കുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L462100",
+    "ml": "മിണ്ടുക",
+    "en": "to talk",
+    "topic": "verbs",
+    "audio": "words/L462100.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മിണ്ടുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459084",
+    "ml": "പുരട്ടുക",
+    "en": "To smear, rub, spread or apply",
+    "topic": "verbs",
+    "audio": "words/L459084.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പുരട്ടുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L459193",
+    "ml": "തലോടുക",
+    "en": "to pat, to pet",
+    "topic": "verbs",
+    "audio": "words/L459193.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തലോടുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L458975",
+    "ml": "മിന്നുക",
+    "en": "to blink; lightning flash",
+    "topic": "verbs",
+    "audio": "words/L458975.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മിന്നുക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413955",
+    "ml": "വലിയ",
+    "en": "big, large",
+    "topic": "adjectives",
+    "audio": "words/L413955.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വലിയ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L542961",
+    "ml": "ചെറിയ",
+    "en": "Small",
+    "topic": "adjectives",
+    "audio": "words/L542961.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചെറിയ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L592557",
+    "ml": "വൃത്തികെട്ട",
+    "en": "(literally) untidy, nasty; bad, gross, filthy",
+    "topic": "adjectives",
+    "audio": "words/L592557.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വൃത്തികെട്ട.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413949",
+    "ml": "പുതിയ",
+    "en": "new",
+    "topic": "adjectives",
+    "audio": "words/L413949.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പുതിയ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L679016",
+    "ml": "മനോഹര",
+    "en": "beautiful",
+    "topic": "adjectives",
+    "audio": "words/L679016.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മനോഹര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1128954",
+    "ml": "ദീർഘ",
+    "en": "long",
+    "topic": "adjectives",
+    "audio": "words/L1128954.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-ദീർഘ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L582440",
+    "ml": "ഹ്രസ്വ",
+    "en": "short",
+    "topic": "adjectives",
+    "audio": "words/L582440.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഹ്രസ്വ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413876",
+    "ml": "ഉയർന്ന",
+    "en": "High; Tall; At elevation",
+    "topic": "adjectives",
+    "audio": "words/L413876.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉയർന്ന.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L689324",
+    "ml": "കനത്ത",
+    "en": "heavy; dense",
+    "topic": "adjectives",
+    "audio": "words/L689324.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കനത്ത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L689323",
+    "ml": "നേരിയ",
+    "en": "light",
+    "topic": "adjectives",
+    "audio": "words/L689323.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നേരിയ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1130859",
+    "ml": "നിർധന",
+    "en": "destitute, poor",
+    "topic": "adjectives",
+    "audio": "words/L1130859.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നിർധന.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L578950",
+    "ml": "പുളിഞ്ചൻ",
+    "en": "sour",
+    "topic": "adjectives",
+    "audio": "words/L578950.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പുളിഞ്ചൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L641539",
+    "ml": "അസത്യമായ",
+    "en": "false",
+    "topic": "adjectives",
+    "audio": "words/L641539.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അസത്യമായ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L679427",
+    "ml": "വ്യത്യസ്ത",
+    "en": "different; diverse",
+    "topic": "adjectives",
+    "audio": "words/L679427.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വ്യത്യസ്ത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L688237",
+    "ml": "സമീപത്തെ",
+    "en": "near",
+    "topic": "adjectives",
+    "audio": "words/L688237.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സമീപത്തെ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413850",
+    "ml": "അകഠിന",
+    "en": "soft; not hard",
+    "topic": "adjectives",
+    "audio": "words/L413850.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അകഠിന.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1403",
+    "ml": "പ്രധാന",
+    "en": "important",
+    "topic": "adjectives",
+    "audio": "words/L1403.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രധാന.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L689484",
+    "ml": "പരുക്കൻ",
+    "en": "coarse; rough",
+    "topic": "adjectives",
+    "audio": "words/L689484.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പരുക്കൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L586684",
+    "ml": "സാക്ഷാൽ",
+    "en": "real, original",
+    "topic": "adjectives",
+    "audio": "words/L586684.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സാക്ഷാൽ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1001797",
+    "ml": "ഭയങ്കര",
+    "en": "scary; massive",
+    "topic": "adjectives",
+    "audio": "words/L1001797.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഭയങ്കര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1124993",
+    "ml": "കൊടിയ",
+    "en": "fierce",
+    "topic": "adjectives",
+    "audio": "words/L1124993.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കൊടിയ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1080941",
+    "ml": "നിശ്ചിത",
+    "en": "fixed; specific",
+    "topic": "adjectives",
+    "audio": "words/L1080941.wav",
+    "commonsFile": "LL-Q36236 (mal)-Netha Hussain-നിശ്ചിത.wav",
+    "speaker": "Netha Hussain"
+  },
+  {
+    "id": "L711007",
+    "ml": "നിഗൂഢ",
+    "en": "hidden; secret",
+    "topic": "adjectives",
+    "audio": "words/L711007.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നിഗൂഢ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L678435",
+    "ml": "അസാധു",
+    "en": "invalid",
+    "topic": "adjectives",
+    "audio": "words/L678435.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അസാധു.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L678426",
+    "ml": "വിലപ്പെട്ട",
+    "en": "valuable",
+    "topic": "adjectives",
+    "audio": "words/L678426.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിലപ്പെട്ട.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L682935",
+    "ml": "അധിക",
+    "en": "excess; extra",
+    "topic": "adjectives",
+    "audio": "words/L682935.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അധിക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L677685",
+    "ml": "പരിചിത",
+    "en": "familiar",
+    "topic": "adjectives",
+    "audio": "words/L677685.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പരിചിത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L678494",
+    "ml": "സവിശേഷ",
+    "en": "special",
+    "topic": "adjectives",
+    "audio": "words/L678494.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സവിശേഷ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L678497",
+    "ml": "അസാധാരണ",
+    "en": "Unusual; uncommon; abnormal; exceptional",
+    "topic": "adjectives",
+    "audio": "words/L678497.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അസാധാരണ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L594363",
+    "ml": "വിവിധ",
+    "en": "various; diverse; several, different",
+    "topic": "adjectives",
+    "audio": "words/L594363.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിവിധ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L678499",
+    "ml": "സാധാരണ",
+    "en": "common; usual; normal; mundane; unexceptional; ordinary",
+    "topic": "adjectives",
+    "audio": "words/L678499.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സാധാരണ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L673517",
+    "ml": "മൊത്തം",
+    "en": "total; whole",
+    "topic": "adjectives",
+    "audio": "words/L673517.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മൊത്തം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1001776",
+    "ml": "പൂർണ്ണ",
+    "en": "complete",
+    "topic": "adjectives",
+    "audio": "words/L1001776.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പൂർണ്ണ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1001773",
+    "ml": "അപൂർണ്ണ",
+    "en": "incomplete",
+    "topic": "adjectives",
+    "audio": "words/L1001773.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അപൂർണ്ണ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L591745",
+    "ml": "ആന്തരിക",
+    "en": "internal",
+    "topic": "adjectives",
+    "audio": "words/L591745.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആന്തരിക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L684347",
+    "ml": "പരമ്പരാഗത",
+    "en": "traditional",
+    "topic": "adjectives",
+    "audio": "words/L684347.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പരമ്പരാഗത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L675912",
+    "ml": "പ്രദേശിക",
+    "en": "regional; local",
+    "topic": "adjectives",
+    "audio": "words/L675912.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രദേശിക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L579449",
+    "ml": "കടുത്ത",
+    "en": "severe, strong",
+    "topic": "adjectives",
+    "audio": "words/L579449.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കടുത്ത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413668",
+    "ml": "പടം",
+    "en": "picture; illustration; film; movie; drawing",
+    "topic": "film_music",
+    "audio": "words/L413668.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പടം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1552",
+    "ml": "ചിത്രം",
+    "en": "artifact that depicts or records visual perception; a movie, film",
+    "topic": "film_music",
+    "audio": "words/L1552.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചിത്രം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L578499",
+    "ml": "കഥ",
+    "en": "story; short story, tale",
+    "topic": "film_music",
+    "audio": "words/L578499.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കഥ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413263",
+    "ml": "സംഗീതം",
+    "en": "music",
+    "topic": "film_music",
+    "audio": "words/L413263.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സംഗീതം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L307596",
+    "ml": "നൃത്തം",
+    "en": "dance; rhythmic movement of the body",
+    "topic": "film_music",
+    "audio": "words/L307596.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-നൃത്തം.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L1421",
+    "ml": "ഗ്രന്ഥം",
+    "en": "book; a major literary work; source book",
+    "topic": "film_music",
+    "audio": "words/L1421.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഗ്രന്ഥം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413642",
+    "ml": "പത്രം",
+    "en": "leaf; newspaper; paper; feather; letter; wing",
+    "topic": "film_music",
+    "audio": "words/L413642.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പത്രം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300804",
+    "ml": "പേര്",
+    "en": "name",
+    "topic": "daily_life",
+    "audio": "words/L300804.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പേര്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1395",
+    "ml": "ഭാഷാ",
+    "en": "language",
+    "topic": "daily_life",
+    "audio": "words/L1395.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഭാഷാ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1440",
+    "ml": "വാക്ക്",
+    "en": "word, smallest linguistic element that may be uttered in isolation with semantic or pragmatic content",
+    "topic": "daily_life",
+    "audio": "words/L1440.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വാക്ക്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L504952",
+    "ml": "പ്രശ്നം",
+    "en": "problem; trouble; issue of concern; question (as in question and answer)",
+    "topic": "daily_life",
+    "audio": "words/L504952.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രശ്നം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L562637",
+    "ml": "കുഴപ്പം",
+    "en": "problem, trouble, issue",
+    "topic": "daily_life",
+    "audio": "words/L562637.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കുഴപ്പം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1490",
+    "ml": "ജോലി",
+    "en": "task, work; activity done by a person to earn money",
+    "topic": "daily_life",
+    "audio": "words/L1490.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ജോലി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1491",
+    "ml": "വേല",
+    "en": "job, work",
+    "topic": "daily_life",
+    "audio": "words/L1491.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-വേല.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L503627",
+    "ml": "ശിഷ്യൻ",
+    "en": "student, pupil; studing under a guru",
+    "topic": "daily_life",
+    "audio": "words/L503627.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ശിഷ്യൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1422",
+    "ml": "വാർത്ത",
+    "en": "news",
+    "topic": "daily_life",
+    "audio": "words/L1422.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-വാർത്ത.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L1486",
+    "ml": "ജീവിതം",
+    "en": "life; living",
+    "topic": "daily_life",
+    "audio": "words/L1486.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ജീവിതം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L549820",
+    "ml": "കിനാവ്",
+    "en": "dream",
+    "topic": "daily_life",
+    "audio": "words/L549820.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കിനാവ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1570",
+    "ml": "കാരണം",
+    "en": "reason; cause",
+    "topic": "daily_life",
+    "audio": "words/L1570.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കാരണം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413512",
+    "ml": "മാർഗം",
+    "en": "way",
+    "topic": "daily_life",
+    "audio": "words/L413512.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മാർഗം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1419",
+    "ml": "ഉപകാരം",
+    "en": "benefit; help; favor; use",
+    "topic": "daily_life",
+    "audio": "words/L1419.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉപകാരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527919",
+    "ml": "ഒച്ച",
+    "en": "an unwanted sound; sound; loudness",
+    "topic": "daily_life",
+    "audio": "words/L527919.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഒച്ച.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L556834",
+    "ml": "ആശങ്ക",
+    "en": "worry, doubt, apprehension; concern; fear",
+    "topic": "daily_life",
+    "audio": "words/L556834.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആശങ്ക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413709",
+    "ml": "ഉല്ലാസം",
+    "en": "joy, happiness",
+    "topic": "daily_life",
+    "audio": "words/L413709.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉല്ലാസം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L3187",
+    "ml": "വേദന",
+    "en": "pain, mental, or emotional unhappiness caused by bad things happening",
+    "topic": "daily_life",
+    "audio": "words/L3187.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വേദന.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413206",
+    "ml": "പനി",
+    "en": "Fever, Febrile response, common medical sign characterized by elevated body temperature; feverial diseases, febrile diseases",
+    "topic": "daily_life",
+    "audio": "words/L413206.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-പനി.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L413638",
+    "ml": "അസുഖം",
+    "en": "disease",
+    "topic": "daily_life",
+    "audio": "words/L413638.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അസുഖം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L3182",
+    "ml": "ഏണി",
+    "en": "ladder",
+    "topic": "daily_life",
+    "audio": "words/L3182.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഏണി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L529538",
+    "ml": "സൂചി",
+    "en": "needle; sewing needle",
+    "topic": "daily_life",
+    "audio": "words/L529538.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സൂചി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L687966",
+    "ml": "കത്രിക",
+    "en": "scissors",
+    "topic": "daily_life",
+    "audio": "words/L687966.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കത്രിക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505185",
+    "ml": "ഘടികാരം",
+    "en": "clock",
+    "topic": "daily_life",
+    "audio": "words/L505185.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഘടികാരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L548990",
+    "ml": "ഇരുമ്പ്",
+    "en": "iron; chemical element with symbol Fe and atomic number 26",
+    "topic": "daily_life",
+    "audio": "words/L548990.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇരുമ്പ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L615834",
+    "ml": "ചുറ്റിക",
+    "en": "hammer",
+    "topic": "daily_life",
+    "audio": "words/L615834.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചുറ്റിക.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L502923",
+    "ml": "തുന്നൽക്കാരൻ",
+    "en": "Tailor",
+    "topic": "daily_life",
+    "audio": "words/L502923.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തുന്നൽക്കാരൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L502874",
+    "ml": "കൃഷിക്കാരൻ",
+    "en": "farmer",
+    "topic": "daily_life",
+    "audio": "words/L502874.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കൃഷിക്കാരൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L692245",
+    "ml": "ക്ഷുരകൻ",
+    "en": "barber",
+    "topic": "daily_life",
+    "audio": "words/L692245.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ക്ഷുരകൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L503645",
+    "ml": "ഭടൻ",
+    "en": "soldier; guard",
+    "topic": "daily_life",
+    "audio": "words/L503645.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഭടൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300898",
+    "ml": "എൻജിനീയർ",
+    "en": "engineer",
+    "topic": "daily_life",
+    "audio": "words/L300898.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-എൻജിനീയർ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300904",
+    "ml": "ഉദ്യോഗസ്ഥൻ",
+    "en": "officer; employee",
+    "topic": "daily_life",
+    "audio": "words/L300904.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉദ്യോഗസ്ഥൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1134208",
+    "ml": "അപരിചിതൻ",
+    "en": "stranger",
+    "topic": "daily_life",
+    "audio": "words/L1134208.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അപരിചിതൻ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413515",
+    "ml": "കൂടാരം",
+    "en": "tent; camp",
+    "topic": "daily_life",
+    "audio": "words/L413515.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കൂടാരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L504189",
+    "ml": "സിംഹാസനം",
+    "en": "throne",
+    "topic": "daily_life",
+    "audio": "words/L504189.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സിംഹാസനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413577",
+    "ml": "വലയം",
+    "en": "ring, circle; halo; ring of light",
+    "topic": "daily_life",
+    "audio": "words/L413577.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വലയം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L529255",
+    "ml": "താലി",
+    "en": "necklace, tied around the bride's neck in Hindu weddings",
+    "topic": "daily_life",
+    "audio": "words/L529255.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-താലി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1110803",
+    "ml": "ചങ്ങല",
+    "en": "chain",
+    "topic": "daily_life",
+    "audio": "words/L1110803.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ചങ്ങല.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L529273",
+    "ml": "വേലി",
+    "en": "fence; tide",
+    "topic": "daily_life",
+    "audio": "words/L529273.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വേലി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L551800",
+    "ml": "വര",
+    "en": "a line; drawing",
+    "topic": "daily_life",
+    "audio": "words/L551800.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വര.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413325",
+    "ml": "ദ്വാരം",
+    "en": "hole",
+    "topic": "daily_life",
+    "audio": "words/L413325.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദ്വാരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L546514",
+    "ml": "വക്ക്",
+    "en": "edge",
+    "topic": "daily_life",
+    "audio": "words/L546514.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വക്ക്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505170",
+    "ml": "പ്രതലം",
+    "en": "surface",
+    "topic": "daily_life",
+    "audio": "words/L505170.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രതലം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505086",
+    "ml": "ഘനം",
+    "en": "weight, load; cloud; seriousness; cube",
+    "topic": "daily_life",
+    "audio": "words/L505086.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഘനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1585",
+    "ml": "പ്രായം",
+    "en": "age",
+    "topic": "daily_life",
+    "audio": "words/L1585.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രായം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2430",
+    "ml": "രഹസ്യം",
+    "en": "secret",
+    "topic": "daily_life",
+    "audio": "words/L2430.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-രഹസ്യം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L686350",
+    "ml": "ദേവത",
+    "en": "goddess; Devi; Hindu goddess",
+    "topic": "daily_life",
+    "audio": "words/L686350.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദേവത.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L507663",
+    "ml": "ഗഗനം",
+    "en": "heaven; sky",
+    "topic": "daily_life",
+    "audio": "words/L507663.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഗഗനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413715",
+    "ml": "അനുഗ്രഹം",
+    "en": "blessings",
+    "topic": "daily_life",
+    "audio": "words/L413715.wav",
+    "commonsFile": "LL-Q36236 (mal)-Akbarali-അനുഗ്രഹം.wav",
+    "speaker": "Akbarali"
+  },
+  {
+    "id": "L413345",
+    "ml": "അവസരം",
+    "en": "opportunity",
+    "topic": "daily_life",
+    "audio": "words/L413345.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അവസരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1556",
+    "ml": "ബഹുമാനം",
+    "en": "respect; honor",
+    "topic": "daily_life",
+    "audio": "words/L1556.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ബഹുമാനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L527443",
+    "ml": "നന്ദി",
+    "en": "gratitude, thank-you",
+    "topic": "daily_life",
+    "audio": "words/L527443.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-നന്ദി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300855",
+    "ml": "സന്തോഷം",
+    "en": "happiness; mental or emotional state of well-being characterized by pleasant emotions",
+    "topic": "daily_life",
+    "audio": "words/L300855.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സന്തോഷം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L504657",
+    "ml": "ക്രോധം",
+    "en": "anger",
+    "topic": "daily_life",
+    "audio": "words/L504657.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ക്രോധം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413663",
+    "ml": "അഭിമാനം",
+    "en": "pride",
+    "topic": "daily_life",
+    "audio": "words/L413663.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അഭിമാനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L2620",
+    "ml": "ദയ",
+    "en": "kindness",
+    "topic": "daily_life",
+    "audio": "words/L2620.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ദയ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413596",
+    "ml": "വിദ്വേഷം",
+    "en": "Hate",
+    "topic": "daily_life",
+    "audio": "words/L413596.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-വിദ്വേഷം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L528088",
+    "ml": "ഉത്കണ്ഠ",
+    "en": "worry; anxiety; concern",
+    "topic": "daily_life",
+    "audio": "words/L528088.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഉത്കണ്ഠ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L584828",
+    "ml": "ഓർമ്മ",
+    "en": "memory",
+    "topic": "daily_life",
+    "audio": "words/L584828.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഓർമ്മ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413646",
+    "ml": "സാരം",
+    "en": "meaning, essense",
+    "topic": "daily_life",
+    "audio": "words/L413646.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-സാരം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L505075",
+    "ml": "പാഠം",
+    "en": "lesson",
+    "topic": "daily_life",
+    "audio": "words/L505075.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പാഠം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1514",
+    "ml": "സേവനം",
+    "en": "service, transaction in which possession of no physical goods are transferred from the seller to the buyer",
+    "topic": "daily_life",
+    "audio": "words/L1514.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-സേവനം.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L1431",
+    "ml": "ലാഭം",
+    "en": "profit",
+    "topic": "daily_life",
+    "audio": "words/L1431.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ലാഭം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1410",
+    "ml": "ധനം",
+    "en": "wealth",
+    "topic": "daily_life",
+    "audio": "words/L1410.wav",
+    "commonsFile": "LL-Q36236 (mal)-Akbarali-ധനം.wav",
+    "speaker": "Akbarali"
+  },
+  {
+    "id": "L1480",
+    "ml": "അനുമതി",
+    "en": "permission; license; permit",
+    "topic": "daily_life",
+    "audio": "words/L1480.wav",
+    "commonsFile": "LL-Q36236 (mal)-Netha Hussain-അനുമതി.wav",
+    "speaker": "Netha Hussain"
+  },
+  {
+    "id": "L3176",
+    "ml": "പ്രണയം",
+    "en": "love, romance",
+    "topic": "daily_life",
+    "audio": "words/L3176.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പ്രണയം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1536",
+    "ml": "യാത്ര",
+    "en": "Journey, travel",
+    "topic": "daily_life",
+    "audio": "words/L1536.wav",
+    "commonsFile": "LL-Q36236 (mal)-Netha Hussain-യാത്ര.wav",
+    "speaker": "Netha Hussain"
+  },
+  {
+    "id": "L413296",
+    "ml": "കളി",
+    "en": "play, game",
+    "topic": "daily_life",
+    "audio": "words/L413296.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-കളി.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L413601",
+    "ml": "ഊഹം",
+    "en": "Guess",
+    "topic": "daily_life",
+    "audio": "words/L413601.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഊഹം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L504114",
+    "ml": "ഗർജ്ജനം",
+    "en": "roar; roaring, bellow",
+    "topic": "daily_life",
+    "audio": "words/L504114.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഗർജനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1417",
+    "ml": "മോചനം",
+    "en": "release",
+    "topic": "daily_life",
+    "audio": "words/L1417.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-മോചനം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1416",
+    "ml": "രക്ഷ",
+    "en": "rescue; salvation; guard; protection",
+    "topic": "daily_life",
+    "audio": "words/L1416.wav",
+    "commonsFile": "LL-Q36236 (mal)-BhagyaMohan-രക്ഷ.wav",
+    "speaker": "BhagyaMohan"
+  },
+  {
+    "id": "L413275",
+    "ml": "ആഗ്രഹം",
+    "en": "wish, desire",
+    "topic": "daily_life",
+    "audio": "words/L413275.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ആഗ്രഹം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L563479",
+    "ml": "അപേക്ഷ",
+    "en": "request; application",
+    "topic": "daily_life",
+    "audio": "words/L563479.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അപേക്ഷ.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L673497",
+    "ml": "ഇടത്",
+    "en": "left",
+    "topic": "directions",
+    "audio": "words/L673497.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-ഇടത്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L1404",
+    "ml": "അകം",
+    "en": "inside",
+    "topic": "directions",
+    "audio": "words/L1404.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-അകം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L300812",
+    "ml": "പുറം",
+    "en": "outside",
+    "topic": "directions",
+    "audio": "words/L300812.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പുറം.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L550841",
+    "ml": "പടിഞ്ഞാറ്",
+    "en": "west; one of the four cardinal directions",
+    "topic": "directions",
+    "audio": "words/L550841.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-പടിഞ്ഞാറ്.wav",
+    "speaker": "Vis M"
+  },
+  {
+    "id": "L42052",
+    "ml": "തെക്ക്",
+    "en": "south",
+    "topic": "directions",
+    "audio": "words/L42052.wav",
+    "commonsFile": "LL-Q36236 (mal)-Vis M-തെക്ക്.wav",
+    "speaker": "Vis M"
+  }
+]
