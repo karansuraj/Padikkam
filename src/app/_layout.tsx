@@ -9,8 +9,9 @@ export default function Layout() {
       <Stack.Screen name="words/index" options={{ title: 'Words' }} />
       <Stack.Screen name="words/[topic]" options={{ title: 'Words' }} />
       <Stack.Screen name="practice" options={{ title: 'Practice' }} />
+      <Stack.Screen name="write" options={{ title: 'Writing practice' }} />
       <Stack.Screen name="review" options={{ title: 'Review cards' }} />
-      <Stack.Screen name="credits" options={{ title: 'Audio credits' }} />
+      <Stack.Screen name="credits" options={{ title: 'Credits' }} />
     </Stack>
   );
 }

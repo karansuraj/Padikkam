@@ -99,6 +99,13 @@ export default function LessonScreen() {
           <PressableScale style={styles.dark} onPress={() => play(letter.id)}>
             <Text style={styles.darkText}>Play sound</Text>
           </PressableScale>
+          <PressableScale
+            style={styles.light}
+            deferPress
+            onPress={() => router.push({ pathname: '/write', params: { letter: letter.id } })}
+          >
+            <Text style={styles.lightText}>Trace it</Text>
+          </PressableScale>
         </View>
         <View style={styles.row}>
           <PressableScale
