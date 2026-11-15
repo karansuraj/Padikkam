@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Wikimedia fetch cache, state and request log (local only)
+.wikimedia-cache/

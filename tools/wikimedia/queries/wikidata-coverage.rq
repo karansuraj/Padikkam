@@ -1,0 +1,11 @@
+# How much Malayalam lexical data does Wikidata have? Counts only, one cheap request.
+# Q36236 = Malayalam, P443 = pronunciation audio, senses carry English glosses.
+SELECT
+  (COUNT(DISTINCT ?l) AS ?lexemes)
+  (COUNT(DISTINCT ?lAudio) AS ?withAudio)
+  (COUNT(DISTINCT ?lGloss) AS ?withEnglishGloss)
+WHERE {
+  ?l dct:language wd:Q36236 .
+  OPTIONAL { ?l ontolex:lexicalForm ?f . ?f wdt:P443 ?a . BIND(?l AS ?lAudio) }
+  OPTIONAL { ?l ontolex:sense ?s . ?s skos:definition ?d . FILTER(LANG(?d) = "en") BIND(?l AS ?lGloss) }
+}
