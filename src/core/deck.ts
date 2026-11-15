@@ -38,5 +38,8 @@ export function validateDeck(entries: Entry[]): ValidationIssue[] {
 
 /** Pick entries for a session without mixing registers unless asked to. */
 export function filterByRegister(entries: Entry[], register: Entry['register'] | 'both'): Entry[] {
-  return register === 'both' ? entries : entries.filter((e) => e.register === register);
+  // Neutral entries (dictionary forms with no register label) fit either kind of session.
+  return register === 'both'
+    ? entries
+    : entries.filter((e) => e.register === register || e.register === 'neutral');
 }

@@ -55,6 +55,16 @@ describe('deck', () => {
     expect(problems).toContain('ml field has no Malayalam characters');
   });
 
+  it('neutral entries appear for formal, spoken and both', () => {
+    const neutral = { ...SEED[0], id: 'word:n', register: 'neutral' as const };
+    const formal = { ...SEED[0], id: 'word:f', register: 'formal' as const };
+    const spoken = { ...SEED[0], id: 'word:s', register: 'spoken' as const };
+    const all = [neutral, formal, spoken];
+    expect(filterByRegister(all, 'formal').map((e) => e.id)).toEqual(['word:n', 'word:f']);
+    expect(filterByRegister(all, 'spoken').map((e) => e.id)).toEqual(['word:n', 'word:s']);
+    expect(filterByRegister(all, 'both')).toHaveLength(3);
+  });
+
   it('keeps registers separate', () => {
     const mixed = [...SEED, { ...SEED[0], id: 'phrase:sukhamano', register: 'spoken' as const }];
     expect(filterByRegister(mixed, 'spoken')).toHaveLength(1);

@@ -8,7 +8,9 @@
  * Malayalam differ a lot in vocabulary, verb endings and pronunciation.
  * Every phrase carries a register so the two never get mixed up in a deck.
  */
-export type Register = 'formal' | 'spoken';
+export type Register = 'formal' | 'spoken' | 'neutral';
+// 'neutral' means a dictionary or citation form that the source does not label
+// as formal or spoken. It is never used to claim that something is verified.
 
 /** Who vouched for this entry. Anything model-generated starts as 'unverified'. */
 export type Provenance =
