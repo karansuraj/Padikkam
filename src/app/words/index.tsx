@@ -1,12 +1,14 @@
 import { router } from 'expo-router';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { FadeIn } from '../../components/FadeIn';
 import { PressableScale } from '../../components/PressableScale';
-import { colors } from '../../theme';
+import { makeStyles } from '../../theme';
 import { AUDIO } from '../../data/audio';
 import { TOPICS, VOCAB_BY_ID } from '../../data/vocab';
+import { Text } from '../../components/Text';
 
 export default function Words() {
+  const styles = useStyles();
   return (
     <FadeIn style={styles.fill}>
       <ScrollView contentContainerStyle={styles.container}>
@@ -32,12 +34,12 @@ export default function Words() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   fill: { flex: 1 },
   container: { padding: 20, gap: 10, paddingBottom: 40 },
-  intro: { fontSize: 14, opacity: 0.7, marginBottom: 6 },
-  row: { borderRadius: 12, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.tint, padding: 16 },
+  intro: { fontSize: 14, color: c.textMuted, marginBottom: 6 },
+  row: { borderRadius: 12, borderWidth: 1, borderColor: c.border, backgroundColor: c.tint, padding: 16 },
   rowText: { gap: 4 },
-  title: { fontSize: 17, fontWeight: '600', color: colors.text },
-  sub: { fontSize: 13, color: colors.textMuted },
-});
+  title: { fontSize: 17, fontWeight: '600', color: c.text },
+  sub: { fontSize: 13, color: c.textMuted },
+}));

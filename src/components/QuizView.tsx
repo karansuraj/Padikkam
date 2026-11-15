@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import { AnswerOption } from './AnswerOption';
 import { FadeIn } from './FadeIn';
 import { PressableScale } from './PressableScale';
 import { isCorrect, type Question } from '../core/quiz';
 import { LETTER_BY_ID } from '../data/letters';
 import { useLetterAudio } from '../hooks/useLetterAudio';
-import { colors } from '../theme';
+import { makeStyles } from '../theme';
+import { Text } from './Text';
 
 interface Props {
   questions: Question[];
@@ -17,6 +18,7 @@ interface Props {
 }
 
 export function QuizView({ questions, onAnswer, onFinish }: Props) {
+  const styles = useStyles();
   const { play } = useLetterAudio();
   const [index, setIndex] = useState(0);
   const [chosen, setChosen] = useState<string | null>(null);
@@ -114,31 +116,31 @@ export function QuizView({ questions, onAnswer, onFinish }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   container: { flex: 1, padding: 20, gap: 16 },
-  count: { textAlign: 'center', fontSize: 14, opacity: 0.6 },
+  count: { textAlign: 'center', fontSize: 14, color: c.textMuted },
   prompt: { alignItems: 'center', gap: 12, paddingVertical: 12 },
   promptText: { fontSize: 18 },
   bigGlyph: { fontSize: 88 },
-  replay: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: colors.primary },
-  replayText: { color: colors.onPrimary, fontWeight: '600' },
+  replay: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: c.primary },
+  replayText: { color: c.onPrimary, fontWeight: '600' },
   options: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
   option: {
     width: '48%',
     minHeight: 72,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 8,
   },
-  optionGlyph: { fontSize: 36, color: colors.text },
-  optionRoman: { fontSize: 22, color: colors.text },
-  right: { backgroundColor: '#d7f2dc', borderColor: '#2e9e4f' },
-  wrong: { backgroundColor: '#f8d7d7', borderColor: '#c23b3b' },
+  optionGlyph: { fontSize: 36, color: c.text },
+  optionRoman: { fontSize: 22, color: c.text },
+  right: { backgroundColor: c.correctBg, borderColor: c.correctBorder },
+  wrong: { backgroundColor: c.wrongBg, borderColor: c.wrongBorder },
   dim: { opacity: 0.4 },
-  next: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
-  nextText: { color: colors.onPrimary, fontWeight: '600' },
-});
+  next: { padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center' },
+  nextText: { color: c.onPrimary, fontWeight: '600' },
+}));

@@ -1,9 +1,9 @@
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import { FadeIn } from '../components/FadeIn';
 import { PressableScale } from '../components/PressableScale';
-import { colors } from '../theme';
+import { makeStyles } from '../theme';
 import { QuizView } from '../components/QuizView';
 import { buildPracticeQuiz, scoreQuiz } from '../core/lesson';
 import { seededRng, type Question } from '../core/quiz';
@@ -12,10 +12,12 @@ import { LESSONS } from '../data/lessons';
 import { LETTERS, LETTER_BY_ID } from '../data/letters';
 import { getPassedLessonIds } from '../data/progress';
 import { useGrading } from '../hooks/useGrading';
+import { Text } from '../components/Text';
 
 type Phase = 'loading' | 'empty' | 'quiz' | 'result';
 
 export default function Practice() {
+  const styles = useStyles();
   const { load, onAnswer } = useGrading();
   const [phase, setPhase] = useState<Phase>('loading');
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -98,20 +100,20 @@ export default function Practice() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 14 },
   title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
-  sub: { fontSize: 16, opacity: 0.7, textAlign: 'center' },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center', alignSelf: 'stretch' },
-  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  sub: { fontSize: 16, color: c.textMuted, textAlign: 'center' },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center', alignSelf: 'stretch' },
+  darkText: { color: c.onPrimary, fontWeight: '600' },
   light: {
     padding: 14,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
     alignSelf: 'stretch',
   },
-  lightText: { color: colors.text, fontWeight: '600' },
-});
+  lightText: { color: c.text, fontWeight: '600' },
+}));

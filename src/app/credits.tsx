@@ -1,11 +1,12 @@
-import { FlatList, Linking, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Linking, View } from 'react-native';
 import { FadeIn } from '../components/FadeIn';
 import { CreditCard } from '../components/CreditCard';
 import { PressableScale } from '../components/PressableScale';
-import { colors } from '../theme';
+import { makeStyles } from '../theme';
 import { summarizeCredits } from '../core/credits';
 import creditsData from '../data/audio-credits.json';
 import { CREDIT_SOURCES } from '../data/credit-sources';
+import { Text } from '../components/Text';
 
 interface Clip {
   label: string;
@@ -21,6 +22,7 @@ const { speakers, licenses } = summarizeCredits(clips);
 const open = (url: string) => Linking.openURL(url).catch((e) => console.warn('Could not open link', e));
 
 export default function Credits() {
+  const styles = useStyles();
   // A list, not a ScrollView of every row, so the screen mounts quickly and the button that
   // opened it can finish its release animation.
   return (
@@ -66,25 +68,25 @@ export default function Credits() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   fill: { flex: 1 },
   container: { padding: 20, gap: 8, paddingBottom: 40 },
-  title: { fontSize: 22, fontWeight: '700', color: colors.text },
-  body: { fontSize: 16, color: colors.text },
-  section: { fontSize: 14, textTransform: 'uppercase', color: colors.textMuted, marginTop: 8 },
+  title: { fontSize: 22, fontWeight: '700', color: c.text },
+  body: { fontSize: 16, color: c.text },
+  section: { fontSize: 14, textTransform: 'uppercase', color: c.textMuted, marginTop: 8 },
   header: { gap: 12, marginBottom: 8 },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.tint,
+    borderColor: c.border,
+    backgroundColor: c.tint,
     borderRadius: 10,
     padding: 10,
   },
-  glyph: { fontSize: 28, width: 56, textAlign: 'center', color: colors.text },
+  glyph: { fontSize: 28, width: 56, textAlign: 'center', color: c.text },
   rowText: { flex: 1, gap: 2 },
-  rowTitle: { fontSize: 14, color: colors.text },
-  link: { fontSize: 13, color: colors.link },
-});
+  rowTitle: { fontSize: 14, color: c.text },
+  link: { fontSize: 13, color: c.link },
+}));

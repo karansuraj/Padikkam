@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { ScrollView, useWindowDimensions, View } from 'react-native';
 import { InfoModal } from '../components/InfoModal';
 import { PressableScale } from '../components/PressableScale';
 import { StrokeClip, hasStrokeClip } from '../components/StrokeClip';
@@ -21,7 +21,8 @@ import { getGlyph } from '../data/glyphs';
 import { getPassedLessonIds } from '../data/progress';
 import { useLetterAudio } from '../hooks/useLetterAudio';
 import { useWriteGrading } from '../hooks/useWriteGrading';
-import { colors } from '../theme';
+import { makeStyles } from '../theme';
+import { Text } from '../components/Text';
 
 type Phase = 'loading' | 'empty' | 'write' | 'result' | 'done';
 type Mode = 'trace' | 'memory';
@@ -36,6 +37,7 @@ const FEEDBACK: Record<TraceFeedback, string> = {
 };
 
 export default function Write() {
+  const styles = useStyles();
   const { letter: letterParam } = useLocalSearchParams<{ letter?: string }>();
   const { width, height } = useWindowDimensions();
   // Fit the canvas, the buttons and the notes on one screen: the page does not scroll while you write.
@@ -295,13 +297,13 @@ export default function Write() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   container: { padding: 20, gap: 12, paddingBottom: 24 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 14 },
-  text: { color: colors.text },
-  title: { fontSize: 22, fontWeight: '700', textAlign: 'center', color: colors.text },
-  sub: { fontSize: 16, textAlign: 'center', color: colors.textMuted },
-  count: { textAlign: 'center', fontSize: 14, color: colors.textMuted },
+  text: { color: c.text },
+  title: { fontSize: 22, fontWeight: '700', textAlign: 'center', color: c.text },
+  sub: { fontSize: 16, textAlign: 'center', color: c.textMuted },
+  count: { textAlign: 'center', fontSize: 14, color: c.textMuted },
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   headerButtons: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   info: {
@@ -309,34 +311,34 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 18,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  roman: { fontSize: 30, fontWeight: '600', color: colors.text },
+  roman: { fontSize: 30, fontWeight: '600', color: c.text },
   modes: { flexDirection: 'row', gap: 8 },
   mode: {
     flex: 1,
     padding: 10,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
   },
-  modeOn: { backgroundColor: colors.primary, borderColor: colors.primary },
+  modeOn: { backgroundColor: c.primary, borderColor: c.primary },
   canvasWrap: { alignItems: 'center' },
   row: { flexDirection: 'row', gap: 10 },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
-  darkFlex: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
-  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center' },
+  darkFlex: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center' },
+  darkText: { color: c.onPrimary, fontWeight: '600' },
   light: {
     padding: 10,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
   },
   lightFlex: {
@@ -344,12 +346,12 @@ const styles = StyleSheet.create({
     padding: 14,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
   },
-  lightText: { color: colors.text, fontWeight: '600' },
+  lightText: { color: c.text, fontWeight: '600' },
   disabled: { opacity: 0.4 },
   resultBox: { gap: 10, alignItems: 'stretch' },
-  score: { fontSize: 44, fontWeight: '700', textAlign: 'center', color: colors.text },
-});
+  score: { fontSize: 44, fontWeight: '700', textAlign: 'center', color: c.text },
+}));

@@ -1,11 +1,13 @@
 import { useVideoPlayer, VideoView } from 'expo-video';
 import { useState } from 'react';
-import { Modal, StyleSheet, Text, View } from 'react-native';
+import { Modal, View } from 'react-native';
 import { clipFor } from '../data/stroke-clips';
-import { colors } from '../theme';
+import { makeStyles } from '../theme';
 import { PressableScale } from './PressableScale';
+import { Text } from './Text';
 
 function Player({ source }: { source: number }) {
+  const styles = useStyles();
   const player = useVideoPlayer(source, (p) => {
     p.loop = true;
     p.muted = true;
@@ -20,6 +22,7 @@ function Player({ source }: { source: number }) {
  * does not check stroke order.
  */
 export function StrokeClip({ letterId }: { letterId: string }) {
+  const styles = useStyles();
   const [open, setOpen] = useState(false);
   const source = clipFor(letterId);
   if (source === undefined) return null;
@@ -46,20 +49,20 @@ export function StrokeClip({ letterId }: { letterId: string }) {
 /** True when `letterId` has a clip to show. */
 export const hasStrokeClip = (letterId: string): boolean => clipFor(letterId) !== undefined;
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   toggle: {
     padding: 12,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
   },
-  toggleText: { fontWeight: '600', color: colors.text },
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: 20 },
-  sheet: { width: '100%', backgroundColor: colors.surface, borderRadius: 16, padding: 16, gap: 12 },
-  video: { width: '100%', aspectRatio: 502 / 270, backgroundColor: '#f4f4f4', borderRadius: 10 },
-  note: { fontSize: 13, color: colors.textMuted },
-  close: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
-  closeText: { color: colors.onPrimary, fontWeight: '600' },
-});
+  toggleText: { fontWeight: '600', color: c.text },
+  backdrop: { flex: 1, backgroundColor: c.scrim, alignItems: 'center', justifyContent: 'center', padding: 20 },
+  sheet: { width: '100%', backgroundColor: c.surface, borderRadius: 16, padding: 16, gap: 12 },
+  video: { width: '100%', aspectRatio: 502 / 270, backgroundColor: c.canvas, borderRadius: 10 },
+  note: { fontSize: 13, color: c.textMuted },
+  close: { padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center' },
+  closeText: { color: c.onPrimary, fontWeight: '600' },
+}));

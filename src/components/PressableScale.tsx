@@ -10,20 +10,20 @@ import {
 } from 'react-native';
 import { playHaptic } from '../haptics';
 import { PRESS, RAISED, pressTargets, pressedOpacity } from '../core/motion';
+import { useTheme } from '../theme';
 import { useReducedMotion } from './useReducedMotion';
 
 // Android draws the shadow from `elevation` and needs an opaque background, which the raised
-// buttons all have. The iOS shadow props are there for completeness.
+// buttons all have. The iOS shadow props are there for completeness. The shadow colour comes from
+// the theme (`colors.shadow`) at render time.
 const shadowRest: ViewStyle = {
   elevation: RAISED.elevation,
-  shadowColor: '#000',
   shadowOffset: { width: 0, height: 2 },
   shadowOpacity: 0.22,
   shadowRadius: 3,
 };
 const shadowPressed: ViewStyle = {
   elevation: RAISED.pressedElevation,
-  shadowColor: '#000',
   shadowOffset: { width: 0, height: 1 },
   shadowOpacity: 0.1,
   shadowRadius: 1,
@@ -76,6 +76,7 @@ export function PressableScale({
   ...rest
 }: PressableScaleProps) {
   const reduceMotion = useReducedMotion();
+  const { colors } = useTheme();
   const inactive = !!disabled || !feedback;
   const [down, setDown] = useState(false);
   const pending = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -154,7 +155,7 @@ export function PressableScale({
       onPressIn={handleIn}
       onPressOut={handleOut}
       style={[
-        raised && !inactive ? (down ? shadowPressed : shadowRest) : null,
+        raised && !inactive ? [down ? shadowPressed : shadowRest, { shadowColor: colors.shadow }] : null,
         style,
         { opacity, transform: [{ translateY }, { scale }, ...(extraTransform ?? [])] },
       ]}

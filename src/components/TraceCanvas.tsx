@@ -2,6 +2,7 @@ import { memo, useMemo, useRef } from 'react';
 import { PanResponder, View } from 'react-native';
 import Svg, { G, Line, Path, Rect } from 'react-native-svg';
 import type { Point, Stroke } from '../core/trace';
+import { useTheme } from '../theme';
 
 interface Props {
   /** Side of the square canvas in dp. */
@@ -46,6 +47,7 @@ const pathOf = (stroke: Stroke): string => {
  * The Svg sits in a View that ignores touches so every event is measured against the outer View.
  */
 export function TraceCanvas({ size, strokes, onChange, guidePath, overlay, disabled }: Props) {
+  const { colors } = useTheme();
   const latest = useRef({ size, onChange, disabled: !!disabled });
   latest.current = { size, onChange, disabled: !!disabled };
   // Mirror of the strokes that handlers can read and write between renders.
@@ -84,23 +86,23 @@ export function TraceCanvas({ size, strokes, onChange, guidePath, overlay, disab
   return (
     <View
       {...pan.panHandlers}
-      style={{ width: size, height: size, backgroundColor: '#fff', borderRadius: 12, overflow: 'hidden' }}
+      style={{ width: size, height: size, backgroundColor: colors.canvas, borderRadius: 12, overflow: 'hidden' }}
     >
       <View pointerEvents="none">
       <Svg width={size} height={size} viewBox="0 0 1 1">
-        <Rect x={0} y={0} width={1} height={1} fill="none" stroke="#ccc" strokeWidth={0.006} />
-        <Line x1={0.5} y1={0} x2={0.5} y2={1} stroke="#ddd" strokeWidth={0.004} strokeDasharray="0.02 0.02" />
-        <Line x1={0} y1={0.5} x2={1} y2={0.5} stroke="#ddd" strokeWidth={0.004} strokeDasharray="0.02 0.02" />
+        <Rect x={0} y={0} width={1} height={1} fill="none" stroke={colors.canvasLine} strokeWidth={0.006} />
+        <Line x1={0.5} y1={0} x2={0.5} y2={1} stroke={colors.canvasGrid} strokeWidth={0.004} strokeDasharray="0.02 0.02" />
+        <Line x1={0} y1={0.5} x2={1} y2={0.5} stroke={colors.canvasGrid} strokeWidth={0.004} strokeDasharray="0.02 0.02" />
         {guidePath ? (
           <G scale={0.01}>
-            <Path d={guidePath} fill="rgba(0,0,0,0.13)" fillRule="nonzero" />
+            <Path d={guidePath} fill={colors.canvasGuide} fillOpacity={0.13} fillRule="nonzero" />
           </G>
         ) : null}
         {strokes.map((s, i) => (
-          <Ink key={i} stroke={s} color="#1d4ed8" width={INK_WIDTH} />
+          <Ink key={i} stroke={s} color={colors.ink} width={INK_WIDTH} />
         ))}
         {overlay?.map((s, i) => (
-          <Ink key={`o${i}`} stroke={s} color="#e11d48" width={0.008} />
+          <Ink key={`o${i}`} stroke={s} color={colors.inkTarget} width={0.008} />
         ))}
       </Svg>
       </View>
