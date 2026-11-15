@@ -35,7 +35,7 @@ Note: with Expo SDK 58, install native packages with `npx expo install <pkg>` on
 
 ## Roadmap
 
-1. Script trainer: letters, sounds, audio, stroke order (see SMC's `mlmash`, MIT, for reference)
+1. Script trainer: letters, sounds, audio, writing practice (tracing is in; stroke order is shown as a clip but not scored, see `docs/superpowers/specs/2026-11-15-letter-tracing-design.md`)
 2. Real vocab deck, imported from a licensed source
 3. TTS audio (Google Cloud ml-IN or Sarvam), cached on device
 4. AI conversation practice through a small proxy, so API keys never ship in the app
@@ -44,3 +44,5 @@ Note: with Expo SDK 58, install native packages with `npx expo install <pkg>` on
 ## Content and licensing
 
 Code is MIT. If you bundle a dataset, record its license and attribution in the entry's `source` field. Olam's English-Malayalam data is ODbL, which has share-alike and attribution terms, so check them before shipping it inside the app. Do not commit API keys or generated audio whose provider terms forbid redistribution.
+
+Writing practice data: letter outlines and tracing targets are derived from Noto Sans Malayalam (SIL OFL 1.1) and the how-to-write clips are from the University of Texas at Austin Malayalam site (CC BY 4.0). Sources, licences and how to regenerate are in `docs/third-party/README.md`.
