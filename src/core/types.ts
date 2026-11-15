@@ -56,3 +56,12 @@ export interface CardState {
 }
 
 export type Grade = 'again' | 'hard' | 'good' | 'easy';
+
+/** An ordered group of letters taught and quizzed together. */
+export interface Lesson {
+  /** Stable id such as "l01". */
+  id: string;
+  title: string;
+  /** Entry ids, in teaching order. */
+  letterIds: string[];
+}
