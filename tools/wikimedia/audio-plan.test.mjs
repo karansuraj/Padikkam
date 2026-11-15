@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { fetchAll, planDownloads, resolveFiles, verifyAudio } from './audio-plan.mjs';
-import { BlockedError } from './polite-client.mjs';
+import { BlockedError, LockTimeoutError, StateCorruptError } from './polite-client.mjs';
 
 const sha1 = (bytes) => createHash('sha1').update(bytes).digest('hex');
 const wav = (seed) => {
@@ -191,6 +191,25 @@ describe('fetchAll', () => {
     expect(r.downloaded).toBe(1);
     expect(c.log.downloads).toHaveLength(2); // the blocked attempt, then nothing more
     expect(JSON.parse(readFileSync(args.manifestPath, 'utf8')).map((m) => m.id)).toEqual(['L1']);
+  });
+
+  it('a corrupt state file or a lock timeout stops the whole run, not one clip at a time', async () => {
+    for (const make of [() => new StateCorruptError('state.json'), () => new LockTimeoutError()]) {
+      const { c, args } = setup(4);
+      const original = c.request;
+      let downloads = 0;
+      c.request = async (url) => {
+        if (!url.startsWith('https://commons.wikimedia.org/')) {
+          downloads++;
+          throw make();
+        }
+        return original(url);
+      };
+      const r = await fetchAll({ ...args, limit: 4 });
+      expect(r.stoppedBy).toBe(make().name);
+      expect(downloads).toBe(1); // it stopped at the first one
+      expect(r.failed).toEqual([]);
+    }
   });
 
   it('a file missing on Commons is reported, not fatal', async () => {
