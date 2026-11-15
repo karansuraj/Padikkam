@@ -18,6 +18,7 @@
     "ts-fsrs": "^5.4.2"
   },
   "devDependencies": {
+    "@types/node": "^22.20.5",
     "@types/react": "~19.3.0",
     "typescript": "~6.0.3",
     "vitest": "^5.1.0"
@@ -26,7 +27,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "gen:audio": "node scripts/gen-audio-map.mjs"
   },
   "private": true,
   "license": "MIT"

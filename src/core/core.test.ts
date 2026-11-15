@@ -49,14 +49,14 @@ describe('deck', () => {
   });
 
   it('flags duplicates and missing Malayalam', () => {
-    const bad = [SEED[0], { ...SEED[0] }, { ...SEED[1], id: 'x', ml: 'abc' }];
+    const bad = [SEED[0], { ...SEED[0] }, { ...SEED[0], id: 'x', ml: 'abc' }];
     const problems = validateDeck(bad).map((i) => i.problem);
     expect(problems).toContain('duplicate id');
     expect(problems).toContain('ml field has no Malayalam characters');
   });
 
   it('keeps registers separate', () => {
-    const mixed = [...SEED, { ...SEED[2], id: 'phrase:sukhamano', register: 'spoken' as const }];
+    const mixed = [...SEED, { ...SEED[0], id: 'phrase:sukhamano', register: 'spoken' as const }];
     expect(filterByRegister(mixed, 'spoken')).toHaveLength(1);
     expect(filterByRegister(mixed, 'both')).toHaveLength(mixed.length);
   });

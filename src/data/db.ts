@@ -24,6 +24,10 @@ export function getDb(): Promise<SQLite.SQLiteDatabase> {
           last_review    INTEGER
         );
         CREATE INDEX IF NOT EXISTS idx_card_state_due ON card_state(due);
+        CREATE TABLE IF NOT EXISTS lesson_progress (
+          lesson_id TEXT PRIMARY KEY NOT NULL,
+          passed_at INTEGER NOT NULL
+        );
       `);
       return db;
     })();
