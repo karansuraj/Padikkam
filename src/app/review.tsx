@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { FadeIn } from '../components/FadeIn';
+import { PressableScale } from '../components/PressableScale';
 import { buildReviewQueue } from '../core/review-queue';
 import { newCardState, review } from '../core/srs';
 import type { CardState, Entry, Grade } from '../core/types';
@@ -76,31 +78,31 @@ export default function Review() {
   return (
     <View style={styles.container}>
       <Text style={styles.count}>{`${queue.length} left`}</Text>
-      <Pressable style={styles.card} onPress={() => setRevealed(true)}>
+      <PressableScale style={styles.card} pressedScale={0.985} disabled={revealed} onPress={() => setRevealed(true)}>
         <Text style={styles.ml}>{current.ml}</Text>
         <Text style={styles.badge}>{current.register}</Text>
         {revealed ? (
-          <>
+          <FadeIn style={styles.revealed}>
             <Text style={styles.roman}>{current.roman}</Text>
             <Text style={styles.en}>{current.en}</Text>
             {hasClip && (
-              <Pressable style={styles.play} onPress={() => play(current.id)}>
+              <PressableScale style={styles.play} onPress={() => play(current.id)}>
                 <Text style={styles.playText}>Play sound</Text>
-              </Pressable>
+              </PressableScale>
             )}
-          </>
+          </FadeIn>
         ) : (
           <Text style={styles.hint}>Tap to reveal</Text>
         )}
-      </Pressable>
+      </PressableScale>
       {revealed && (
-        <View style={styles.row}>
+        <FadeIn style={styles.row}>
           {GRADES.map(({ grade: g, label }) => (
-            <Pressable key={g} style={styles.btn} onPress={() => grade(g)}>
+            <PressableScale key={g} style={styles.btn} onPress={() => grade(g)}>
               <Text style={styles.btnText}>{label}</Text>
-            </Pressable>
+            </PressableScale>
           ))}
-        </View>
+        </FadeIn>
       )}
     </View>
   );
@@ -126,6 +128,7 @@ const styles = StyleSheet.create({
   roman: { fontSize: 24 },
   en: { fontSize: 18, opacity: 0.8, textAlign: 'center' },
   hint: { opacity: 0.5 },
+  revealed: { alignItems: 'center', gap: 12 },
   play: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: '#222' },
   playText: { color: '#fff', fontWeight: '600' },
   row: { flexDirection: 'row', gap: 8 },
