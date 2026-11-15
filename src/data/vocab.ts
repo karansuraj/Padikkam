@@ -1,3 +1,4 @@
+import { tidyGloss } from '../core/gloss';
 import { transliterate } from '../core/translit';
 import type { Entry } from '../core/types';
 import raw from './vocab-data.json';
@@ -47,7 +48,7 @@ export const VOCAB: Entry[] = (raw as RawWord[]).map((w) => ({
   register: 'neutral',
   ml: w.ml,
   roman: transliterate(w.ml),
-  en: w.en,
+  en: tidyGloss(w.en),
   provenance: 'dataset',
   tags: [w.topic],
   audio: w.audio,
