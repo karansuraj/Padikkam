@@ -8,6 +8,7 @@ import {
   type StyleProp,
   type ViewStyle,
 } from 'react-native';
+import { playHaptic } from '../haptics';
 import { PRESS, RAISED, pressTargets, pressedOpacity } from '../core/motion';
 import { useReducedMotion } from './useReducedMotion';
 
@@ -41,6 +42,8 @@ export interface PressableScaleProps extends Omit<PressableProps, 'style'> {
    * instant reaction such as quiz answers or sound playback. A second tap while one is pending is ignored.
    */
   deferPress?: boolean;
+  /** Play a light haptic when the press registers. Default true. */
+  haptic?: boolean;
   /** Draw a soft shadow so it reads as a raised button, and sink it while pressed. Default true. A disabled or silent one is flat. */
   raised?: boolean;
   /** Set false to keep the button enabled but silent (for example a quiz option after the answer is in). */
@@ -62,6 +65,7 @@ export function PressableScale({
   feedback = true,
   raised = true,
   deferPress = false,
+  haptic = true,
   pressedScale,
   extraTransform,
   disabled,
@@ -109,6 +113,7 @@ export function PressableScale({
 
   const handlePress = (e: GestureResponderEvent) => {
     if (!onPress) return;
+    if (haptic) playHaptic('tap');
     if (!deferPress || reduceMotion) {
       onPress(e);
       return;
