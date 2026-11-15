@@ -45,6 +45,17 @@ node tools/wikimedia/query.mjs wdqs tools/wikimedia/queries/wikidata-coverage.rq
 node tools/wikimedia/query.mjs wdqs tools/wikimedia/queries/wikidata-coverage.rq --go   # sends 1 request, caches it
 ```
 
+## Watching a download
+
+`fetch-audio` prints nothing while it runs (everything goes to the audit log). To see progress, in another terminal:
+
+```bash
+node tools/wikimedia/status.mjs            # one snapshot
+node tools/wikimedia/status.mjs --watch    # refreshes every 10 s
+```
+
+It only reads local files (the log, state and manifest) and makes no requests, so it can run at any time without affecting the download. The raw log is `.wikimedia-cache/state/requests.log` (`tail -f` works too).
+
 ## Coverage found on 2026-11-15 (Wikidata, Malayalam = Q36236)
 
 - 67,390 lexemes; 10,634 with pronunciation audio; 11,211 with an English gloss.

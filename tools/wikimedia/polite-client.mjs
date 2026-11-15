@@ -30,7 +30,7 @@ const HOST_KIND = {
   'upload.wikimedia.org': 'download',
 };
 
-const DEFAULTS = {
+export const DEFAULTS = {
   gaps: { api: { base: 5000, jitter: 3000 }, download: { base: 12000, jitter: 6000 } },
   dailyCaps: { api: 100, download: 150 },
   failureLimit: 3,
