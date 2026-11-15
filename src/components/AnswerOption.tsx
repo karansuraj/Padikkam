@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Animated } from 'react-native';
 import { REACTION, shakeOffsets } from '../core/motion';
+import { playHaptic } from '../haptics';
 import { PressableScale, type PressableScaleProps } from './PressableScale';
 import { useReducedMotion } from './useReducedMotion';
 
@@ -11,7 +12,7 @@ interface Props extends PressableScaleProps {
 
 /**
  * A quiz answer button. The right/wrong colouring comes from `style` immediately; the reaction
- * is a short transform on top and never delays it.
+ * is a short transform on top and never delays it. It plays its own right/wrong haptic instead of the tap.
  */
 export function AnswerOption({ reaction = null, ...rest }: Props) {
   const reduceMotion = useReducedMotion();
@@ -19,7 +20,9 @@ export function AnswerOption({ reaction = null, ...rest }: Props) {
   const shake = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (!reaction || reduceMotion) return;
+    if (!reaction) return;
+    playHaptic(reaction === 'pop' ? 'correct' : 'wrong');
+    if (reduceMotion) return;
     const anim =
       reaction === 'pop'
         ? Animated.sequence([
@@ -35,5 +38,5 @@ export function AnswerOption({ reaction = null, ...rest }: Props) {
     return () => anim.stop();
   }, [reaction, reduceMotion, pop, shake]);
 
-  return <PressableScale {...rest} extraTransform={[{ translateX: shake }, { scale: pop }]} />;
+  return <PressableScale {...rest} haptic={false} extraTransform={[{ translateX: shake }, { scale: pop }]} />;
 }
