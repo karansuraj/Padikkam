@@ -3,6 +3,7 @@ import { useCallback, useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { FadeIn } from '../components/FadeIn';
 import { PressableScale } from '../components/PressableScale';
+import { colors } from '../theme';
 import { unlockedLessonIds } from '../core/lesson';
 import { LESSONS } from '../data/lessons';
 import { LETTERS, LETTER_BY_ID } from '../data/letters';
@@ -34,6 +35,7 @@ export default function Letters() {
             <PressableScale
               key={lesson.id}
               disabled={!isOpen}
+            deferPress
               onPress={() => router.push(`/lesson/${lesson.id}`)}
               style={[styles.row, !isOpen && styles.locked]}
             >
@@ -69,25 +71,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: colors.border,
+    backgroundColor: colors.tint,
     padding: 14,
     gap: 12,
   },
   locked: { opacity: 0.4 },
   rowText: { flex: 1, gap: 4 },
-  rowTitle: { fontSize: 16, fontWeight: '600' },
-  preview: { fontSize: 20 },
-  status: { fontSize: 13, opacity: 0.7 },
+  rowTitle: { fontSize: 16, fontWeight: '600', color: colors.text },
+  preview: { fontSize: 20, color: colors.text },
+  status: { fontSize: 13, fontWeight: '600', color: colors.link },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   cell: {
     width: '22%',
     aspectRatio: 1,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: colors.border,
+    backgroundColor: colors.tint,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  glyph: { fontSize: 28 },
-  roman: { fontSize: 11, opacity: 0.6 },
+  glyph: { fontSize: 28, color: colors.text },
+  roman: { fontSize: 11, color: colors.textMuted },
 });

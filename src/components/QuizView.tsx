@@ -6,6 +6,7 @@ import { PressableScale } from './PressableScale';
 import { isCorrect, type Question } from '../core/quiz';
 import { LETTER_BY_ID } from '../data/letters';
 import { useLetterAudio } from '../hooks/useLetterAudio';
+import { colors } from '../theme';
 
 interface Props {
   questions: Question[];
@@ -119,24 +120,25 @@ const styles = StyleSheet.create({
   prompt: { alignItems: 'center', gap: 12, paddingVertical: 12 },
   promptText: { fontSize: 18 },
   bigGlyph: { fontSize: 88 },
-  replay: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: '#222' },
-  replayText: { color: '#fff', fontWeight: '600' },
+  replay: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: colors.primary },
+  replayText: { color: colors.onPrimary, fontWeight: '600' },
   options: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
   option: {
     width: '48%',
     minHeight: 72,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 8,
   },
-  optionGlyph: { fontSize: 36 },
-  optionRoman: { fontSize: 22 },
+  optionGlyph: { fontSize: 36, color: colors.text },
+  optionRoman: { fontSize: 22, color: colors.text },
   right: { backgroundColor: '#d7f2dc', borderColor: '#2e9e4f' },
   wrong: { backgroundColor: '#f8d7d7', borderColor: '#c23b3b' },
   dim: { opacity: 0.4 },
-  next: { padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center' },
-  nextText: { color: '#fff', fontWeight: '600' },
+  next: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
+  nextText: { color: colors.onPrimary, fontWeight: '600' },
 });
