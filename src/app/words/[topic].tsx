@@ -1,14 +1,16 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { FadeIn } from '../../components/FadeIn';
 import { PressableScale } from '../../components/PressableScale';
 import type { Entry } from '../../core/types';
 import { AUDIO } from '../../data/audio';
 import { TOPICS, VOCAB_BY_ID } from '../../data/vocab';
 import { useLetterAudio } from '../../hooks/useLetterAudio';
-import { colors } from '../../theme';
+import { makeStyles } from '../../theme';
+import { Text } from '../../components/Text';
 
 export default function TopicScreen() {
+  const styles = useStyles();
   const { topic } = useLocalSearchParams<{ topic: string }>();
   const { play } = useLetterAudio();
   const found = TOPICS.find((t) => t.id === topic);
@@ -52,27 +54,27 @@ export default function TopicScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   fill: { flex: 1 },
   list: { padding: 20, gap: 10, paddingBottom: 40 },
   heading: { fontSize: 22, fontWeight: '700', marginBottom: 8 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 14 },
   title: { fontSize: 20, fontWeight: '700' },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center', alignSelf: 'stretch' },
-  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center', alignSelf: 'stretch' },
+  darkText: { color: c.onPrimary, fontWeight: '600' },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.tint,
+    borderColor: c.border,
+    backgroundColor: c.tint,
     padding: 14,
     gap: 12,
   },
   text: { flex: 1, gap: 2 },
-  ml: { fontSize: 26, color: colors.text },
-  roman: { fontSize: 16, color: colors.text },
-  en: { fontSize: 14, color: colors.textMuted },
-  play: { fontSize: 14, fontWeight: '600', color: colors.link },
-});
+  ml: { fontSize: 26, color: c.text },
+  roman: { fontSize: 16, color: c.text },
+  en: { fontSize: 14, color: c.textMuted },
+  play: { fontSize: 14, fontWeight: '600', color: c.link },
+}));

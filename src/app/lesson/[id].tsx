@@ -1,9 +1,9 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { PressableScale } from '../../components/PressableScale';
 import { QuizView } from '../../components/QuizView';
-import { colors } from '../../theme';
+import { makeStyles } from '../../theme';
 import { buildLessonQuiz, scoreQuiz, unlockedLessonIds } from '../../core/lesson';
 import { seededRng, type Question } from '../../core/quiz';
 import { LESSONS } from '../../data/lessons';
@@ -11,10 +11,12 @@ import { LETTER_BY_ID } from '../../data/letters';
 import { getPassedLessonIds, markLessonPassed } from '../../data/progress';
 import { useGrading } from '../../hooks/useGrading';
 import { useLetterAudio } from '../../hooks/useLetterAudio';
+import { Text } from '../../components/Text';
 
 type Phase = 'loading' | 'intro' | 'quiz' | 'result';
 
 export default function LessonScreen() {
+  const styles = useStyles();
   const { id } = useLocalSearchParams<{ id: string }>();
   const lesson = LESSONS.find((l) => l.id === id);
   const lessonIndex = LESSONS.findIndex((l) => l.id === id);
@@ -159,15 +161,15 @@ export default function LessonScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((c) => ({
   container: { flex: 1, padding: 20, gap: 16 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  count: { textAlign: 'center', fontSize: 14, opacity: 0.6 },
+  count: { textAlign: 'center', fontSize: 14, color: c.textMuted },
   card: {
     flex: 1,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: c.border,
     alignItems: 'center',
     justifyContent: 'center',
     gap: 12,
@@ -175,22 +177,22 @@ const styles = StyleSheet.create({
   },
   glyph: { fontSize: 96 },
   roman: { fontSize: 28 },
-  en: { fontSize: 16, opacity: 0.8, textAlign: 'center' },
+  en: { fontSize: 16, color: c.textMuted, textAlign: 'center' },
   row: { flexDirection: 'row', gap: 10 },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
-  darkFlex: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
-  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center' },
+  darkFlex: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: c.primary, alignItems: 'center' },
+  darkText: { color: c.onPrimary, fontWeight: '600' },
   light: {
     padding: 14,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.border,
-    backgroundColor: colors.surface,
+    borderColor: c.border,
+    backgroundColor: c.surface,
     alignItems: 'center',
   },
-  lightText: { color: colors.text, fontWeight: '600' },
+  lightText: { color: c.text, fontWeight: '600' },
   disabled: { opacity: 0.4 },
   result: { padding: 20, gap: 14, alignItems: 'stretch' },
   resultTitle: { fontSize: 26, fontWeight: '700', textAlign: 'center', marginTop: 24 },
   resultScore: { fontSize: 18, textAlign: 'center' },
-});
+}));
