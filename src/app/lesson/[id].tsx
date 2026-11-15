@@ -1,6 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { PressableScale } from '../../components/PressableScale';
 import { QuizView } from '../../components/QuizView';
 import { buildLessonQuiz, scoreQuiz, unlockedLessonIds } from '../../core/lesson';
 import { seededRng, type Question } from '../../core/quiz';
@@ -94,21 +95,21 @@ export default function LessonScreen() {
           <Text style={styles.glyph}>{letter.ml}</Text>
           <Text style={styles.roman}>{letter.roman}</Text>
           <Text style={styles.en}>{letter.en}</Text>
-          <Pressable style={styles.dark} onPress={() => play(letter.id)}>
+          <PressableScale style={styles.dark} onPress={() => play(letter.id)}>
             <Text style={styles.darkText}>Play sound</Text>
-          </Pressable>
+          </PressableScale>
         </View>
         <View style={styles.row}>
-          <Pressable
+          <PressableScale
             style={[styles.light, step === 0 && styles.disabled]}
             disabled={step === 0}
             onPress={() => setStep(step - 1)}
           >
             <Text>Back</Text>
-          </Pressable>
-          <Pressable style={styles.darkFlex} onPress={() => (last ? startQuiz() : setStep(step + 1))}>
+          </PressableScale>
+          <PressableScale style={styles.darkFlex} onPress={() => (last ? startQuiz() : setStep(step + 1))}>
             <Text style={styles.darkText}>{last ? 'Start quiz' : 'Next'}</Text>
-          </Pressable>
+          </PressableScale>
         </View>
       </View>
     );
@@ -129,23 +130,23 @@ export default function LessonScreen() {
           : 'You need 80% to unlock the next lesson. Listen again and retry.'}
       </Text>
       {!result?.passed && (
-        <Pressable style={styles.dark} onPress={() => { setStep(0); setPhase('intro'); }}>
+        <PressableScale style={styles.dark} onPress={() => { setStep(0); setPhase('intro'); }}>
           <Text style={styles.darkText}>Review the letters</Text>
-        </Pressable>
+        </PressableScale>
       )}
       {!result?.passed && (
-        <Pressable style={styles.dark} onPress={startQuiz}>
+        <PressableScale style={styles.dark} onPress={startQuiz}>
           <Text style={styles.darkText}>Try the quiz again</Text>
-        </Pressable>
+        </PressableScale>
       )}
       {result?.passed && nextLesson && (
-        <Pressable style={styles.dark} onPress={() => router.replace(`/lesson/${nextLesson.id}`)}>
+        <PressableScale style={styles.dark} onPress={() => router.replace(`/lesson/${nextLesson.id}`)}>
           <Text style={styles.darkText}>{`Next: ${nextLesson.title}`}</Text>
-        </Pressable>
+        </PressableScale>
       )}
-      <Pressable style={styles.light} onPress={() => router.dismissTo('/letters')}>
+      <PressableScale style={styles.light} onPress={() => router.dismissTo('/letters')}>
         <Text>Back to lessons</Text>
-      </Pressable>
+      </PressableScale>
     </ScrollView>
   );
 }

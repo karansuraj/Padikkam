@@ -1,6 +1,8 @@
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { FadeIn } from '../components/FadeIn';
+import { PressableScale } from '../components/PressableScale';
 import { QuizView } from '../components/QuizView';
 import { buildPracticeQuiz, scoreQuiz } from '../core/lesson';
 import { seededRng, type Question } from '../core/quiz';
@@ -54,15 +56,15 @@ export default function Practice() {
 
   if (phase === 'empty') {
     return (
-      <View style={styles.center}>
+      <FadeIn style={styles.center}>
         <Text style={styles.title}>Nothing to practise right now</Text>
         <Text style={styles.sub}>
           Practice covers letters from lessons you have passed, once they are due again.
         </Text>
-        <Pressable style={styles.dark} onPress={() => router.replace('/letters')}>
+        <PressableScale style={styles.dark} onPress={() => router.replace('/letters')}>
           <Text style={styles.darkText}>Go to Letters</Text>
-        </Pressable>
-      </View>
+        </PressableScale>
+      </FadeIn>
     );
   }
 
@@ -82,16 +84,16 @@ export default function Practice() {
   }
 
   return (
-    <View style={styles.center}>
+    <FadeIn style={styles.center}>
       <Text style={styles.title}>Practice done</Text>
       <Text style={styles.sub}>{`${score?.correct ?? 0} of ${score?.total ?? 0} correct`}</Text>
-      <Pressable style={styles.dark} onPress={start}>
+      <PressableScale style={styles.dark} onPress={start}>
         <Text style={styles.darkText}>Practise again</Text>
-      </Pressable>
-      <Pressable style={styles.light} onPress={() => router.dismissTo('/')}>
+      </PressableScale>
+      <PressableScale style={styles.light} onPress={() => router.dismissTo('/')}>
         <Text>Home</Text>
-      </Pressable>
-    </View>
+      </PressableScale>
+    </FadeIn>
   );
 }
 

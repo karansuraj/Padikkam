@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { AnswerOption } from './AnswerOption';
+import { FadeIn } from './FadeIn';
+import { PressableScale } from './PressableScale';
 import { isCorrect, type Question } from '../core/quiz';
 import { LETTER_BY_ID } from '../data/letters';
 import { useLetterAudio } from '../hooks/useLetterAudio';
@@ -55,25 +58,25 @@ export function QuizView({ questions, onAnswer, onFinish }: Props) {
   const isLast = index + 1 >= questions.length;
 
   return (
-    <View style={styles.container}>
+    <FadeIn key={index} style={styles.container}>
       <Text style={styles.count}>{`Question ${index + 1} of ${questions.length}`}</Text>
 
       <View style={styles.prompt}>
         {q.kind === 'hear-pick-glyph' ? (
           <>
             <Text style={styles.promptText}>Which letter is this?</Text>
-            <Pressable style={styles.replay} onPress={() => play(q.letterId)}>
+            <PressableScale style={styles.replay} onPress={() => play(q.letterId)}>
               <Text style={styles.replayText}>Play sound</Text>
-            </Pressable>
+            </PressableScale>
           </>
         ) : (
           <>
             <Text style={styles.promptText}>What sound is this?</Text>
             <Text style={styles.bigGlyph}>{target?.ml}</Text>
             {chosen !== null && (
-              <Pressable style={styles.replay} onPress={() => play(q.letterId)}>
+              <PressableScale style={styles.replay} onPress={() => play(q.letterId)}>
                 <Text style={styles.replayText}>Play sound</Text>
-              </Pressable>
+              </PressableScale>
             )}
           </>
         )}
@@ -86,21 +89,27 @@ export function QuizView({ questions, onAnswer, onFinish }: Props) {
           const state =
             chosen === null ? null : isAnswer ? styles.right : id === chosen ? styles.wrong : styles.dim;
           return (
-            <Pressable key={id} style={[styles.option, state]} onPress={() => choose(id)}>
+            <AnswerOption
+              key={id}
+              style={[styles.option, state]}
+              feedback={chosen === null}
+              reaction={id === chosen ? (isAnswer ? 'pop' : 'shake') : null}
+              onPress={() => choose(id)}
+            >
               <Text style={q.kind === 'hear-pick-glyph' ? styles.optionGlyph : styles.optionRoman}>
                 {q.kind === 'hear-pick-glyph' ? entry?.ml : entry?.roman}
               </Text>
-            </Pressable>
+            </AnswerOption>
           );
         })}
       </View>
 
       {chosen !== null && (
-        <Pressable style={styles.next} onPress={next}>
+        <PressableScale style={styles.next} onPress={next}>
           <Text style={styles.nextText}>{isLast ? 'Finish' : 'Next'}</Text>
-        </Pressable>
+        </PressableScale>
       )}
-    </View>
+    </FadeIn>
   );
 }
 

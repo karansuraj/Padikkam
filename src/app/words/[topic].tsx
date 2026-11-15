@@ -1,5 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FadeIn } from '../../components/FadeIn';
+import { PressableScale } from '../../components/PressableScale';
 import type { Entry } from '../../core/types';
 import { AUDIO } from '../../data/audio';
 import { TOPICS, VOCAB_BY_ID } from '../../data/vocab';
@@ -14,9 +16,9 @@ export default function TopicScreen() {
     return (
       <View style={styles.center}>
         <Text style={styles.title}>Topic not found</Text>
-        <Pressable style={styles.dark} onPress={() => router.dismissTo('/words')}>
+        <PressableScale style={styles.dark} onPress={() => router.dismissTo('/words')}>
           <Text style={styles.darkText}>Back to topics</Text>
-        </Pressable>
+        </PressableScale>
       </View>
     );
   }
@@ -24,30 +26,33 @@ export default function TopicScreen() {
   const entries = found.entryIds.map((id) => VOCAB_BY_ID.get(id)).filter((e): e is Entry => e !== undefined);
 
   return (
-    <FlatList
-      data={entries}
-      keyExtractor={(e) => e.id}
-      contentContainerStyle={styles.list}
-      ListHeaderComponent={<Text style={styles.heading}>{found.title}</Text>}
-      renderItem={({ item }) => {
-        // A word whose clip has not been downloaded yet simply has no play button.
-        const hasClip = !!item.audio && AUDIO[item.audio] !== undefined;
-        return (
-          <Pressable style={styles.row} disabled={!hasClip} onPress={() => play(item.id)}>
-            <View style={styles.text}>
-              <Text style={styles.ml}>{item.ml}</Text>
-              <Text style={styles.roman}>{item.roman}</Text>
-              <Text style={styles.en} numberOfLines={2}>{item.en}</Text>
-            </View>
-            {hasClip && <Text style={styles.play}>Play</Text>}
-          </Pressable>
-        );
-      }}
-    />
+    <FadeIn style={styles.fill}>
+      <FlatList
+        data={entries}
+        keyExtractor={(e) => e.id}
+        contentContainerStyle={styles.list}
+        ListHeaderComponent={<Text style={styles.heading}>{found.title}</Text>}
+        renderItem={({ item }) => {
+          // A word whose clip has not been downloaded yet simply has no play button.
+          const hasClip = !!item.audio && AUDIO[item.audio] !== undefined;
+          return (
+            <PressableScale style={styles.row} disabled={!hasClip} onPress={() => play(item.id)}>
+              <View style={styles.text}>
+                <Text style={styles.ml}>{item.ml}</Text>
+                <Text style={styles.roman}>{item.roman}</Text>
+                <Text style={styles.en} numberOfLines={2}>{item.en}</Text>
+              </View>
+              {hasClip && <Text style={styles.play}>Play</Text>}
+            </PressableScale>
+          );
+        }}
+      />
+    </FadeIn>
   );
 }
 
 const styles = StyleSheet.create({
+  fill: { flex: 1 },
   list: { padding: 20, gap: 10, paddingBottom: 40 },
   heading: { fontSize: 22, fontWeight: '700', marginBottom: 8 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 14 },

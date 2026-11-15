@@ -1,5 +1,7 @@
 import { Link } from 'expo-router';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { FadeIn } from '../components/FadeIn';
+import { PressableScale } from '../components/PressableScale';
 
 const ITEMS: { href: '/letters' | '/words' | '/practice' | '/review' | '/credits'; title: string; sub: string }[] = [
   { href: '/letters', title: 'Letters', sub: 'Learn the script, lesson by lesson, with audio' },
@@ -12,13 +14,15 @@ const ITEMS: { href: '/letters' | '/words' | '/practice' | '/review' | '/credits
 export default function Home() {
   return (
     <View style={styles.container}>
-      {ITEMS.map((item) => (
-        <Link key={item.href} href={item.href} asChild>
-          <Pressable style={styles.card}>
-            <Text style={styles.title}>{item.title}</Text>
-            <Text style={styles.sub}>{item.sub}</Text>
-          </Pressable>
-        </Link>
+      {ITEMS.map((item, i) => (
+        <FadeIn key={item.href} delay={i * 40}>
+          <Link href={item.href} asChild>
+            <PressableScale style={styles.card}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.sub}>{item.sub}</Text>
+            </PressableScale>
+          </Link>
+        </FadeIn>
       ))}
     </View>
   );
