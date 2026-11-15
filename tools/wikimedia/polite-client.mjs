@@ -10,7 +10,12 @@
 //  - Daily caps per kind of request, and a STOP file that halts everything.
 //  - Only https, and only a short allow-list of Wikimedia hosts.
 //  - Every request is appended to an audit log.
-import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
+//  - Only one process at a time (a lock file); state is re-read after every pause, and a
+//    corrupt state file stops the run instead of silently resetting the protections.
+//  - A 403 stops everything on the first one; redirects are not followed; requests time out.
+import {
+  appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, renameSync, statSync, unlinkSync, writeFileSync,
+} from 'node:fs';
 import { join } from 'node:path';
 
 const NAME = 'PadikkamAudioFetch';
@@ -49,6 +54,12 @@ export class StoppedError extends Error {
   constructor() {
     super('STOP file present. Remove it to continue.');
     this.name = 'StoppedError';
+  }
+}
+export class StateCorruptError extends Error {
+  constructor(path) {
+    super(`State file ${path} is unreadable. Not making any request: fix or delete it only if you are sure no block is active.`);
+    this.name = 'StateCorruptError';
   }
 }
 export class HttpError extends Error {
@@ -93,6 +104,9 @@ export class PoliteClient {
     dailyCaps = DEFAULTS.dailyCaps,
     failureLimit = DEFAULTS.failureLimit,
     defaultBlockSeconds = DEFAULTS.defaultBlockSeconds,
+    timeoutMs = 60_000,
+    lockStaleMs = 5 * 60_000,
+    lockWaitMs = 20 * 60_000,
   }) {
     this.userAgent = buildUserAgent(contact);
     this.dir = dir;
@@ -104,6 +118,9 @@ export class PoliteClient {
     this.dailyCaps = dailyCaps;
     this.failureLimit = failureLimit;
     this.defaultBlockSeconds = defaultBlockSeconds;
+    this.timeoutMs = timeoutMs;
+    this.lockStaleMs = lockStaleMs;
+    this.lockWaitMs = lockWaitMs;
     this.chain = Promise.resolve();
     mkdirSync(dir, { recursive: true });
   }
@@ -119,10 +136,39 @@ export class PoliteClient {
     return join(this.dir, 'state.json');
   }
   #loadState() {
+    let text;
     try {
-      return JSON.parse(readFileSync(this.#statePath(), 'utf8'));
+      text = readFileSync(this.#statePath(), 'utf8');
+    } catch (e) {
+      if (e.code === 'ENOENT') return { lastRequestAt: 0, blockedUntil: 0, failures: 0, counts: {} };
+      throw new StateCorruptError(this.#statePath());
+    }
+    try {
+      return JSON.parse(text);
     } catch {
-      return { lastRequestAt: 0, blockedUntil: 0, failures: 0, counts: {} };
+      throw new StateCorruptError(this.#statePath()); // fail closed: never reset the protections
+    }
+  }
+
+  /** Only one process may talk to Wikimedia at a time. */
+  async #acquireLock() {
+    const lock = join(this.dir, 'lock');
+    const started = Date.now();
+    for (;;) {
+      try {
+        closeSync(openSync(lock, 'wx'));
+        return lock;
+      } catch (e) {
+        if (e.code !== 'EEXIST') throw e;
+      }
+      try {
+        if (Date.now() - statSync(lock).mtimeMs > this.lockStaleMs) {
+          unlinkSync(lock); // left behind by a crashed run
+          continue;
+        }
+      } catch {}
+      if (Date.now() - started > this.lockWaitMs) throw new Error('Another run holds the lock for too long. Not making any request.');
+      await this.sleep(500);
     }
   }
   #saveState(state) {
@@ -139,6 +185,18 @@ export class PoliteClient {
     return new BlockedError(state.blockedUntil, why);
   }
 
+  /** Re-read the state and refuse to go on if anything says stop. */
+  #checkpoint(kind) {
+    if (existsSync(join(this.dir, 'STOP'))) throw new StoppedError();
+    const state = this.#loadState();
+    if (state.blockedUntil > this.now()) throw new BlockedError(state.blockedUntil, 'earlier rate limit or failures');
+    const day = new Date(this.now()).toISOString().slice(0, 10);
+    state.counts = { [day]: state.counts?.[day] ?? {} }; // drop older days
+    const cap = this.dailyCaps[kind];
+    if ((state.counts[day][kind] ?? 0) >= cap) throw new CapReachedError(kind, cap);
+    return { state, day };
+  }
+
   async #do(rawUrl, init) {
     const url = new URL(rawUrl);
     if (url.protocol !== 'https:') throw new Error(`Only https is allowed: ${rawUrl}`);
@@ -146,18 +204,24 @@ export class PoliteClient {
     if (!kind) throw new Error(`Host not on the Wikimedia allow-list: ${url.hostname}`);
 
     if (existsSync(join(this.dir, 'STOP'))) throw new StoppedError();
+    const lock = await this.#acquireLock();
+    try {
+      return await this.#locked(rawUrl, init, kind);
+    } finally {
+      try {
+        unlinkSync(lock);
+      } catch {}
+    }
+  }
 
-    const state = this.#loadState();
-    if (state.blockedUntil > this.now()) throw new BlockedError(state.blockedUntil, 'earlier rate limit or failures');
-
-    const day = new Date(this.now()).toISOString().slice(0, 10);
-    state.counts = { [day]: state.counts?.[day] ?? {} }; // drop older days
-    const cap = this.dailyCaps[kind];
-    if ((state.counts[day][kind] ?? 0) >= cap) throw new CapReachedError(kind, cap);
-
+  async #locked(rawUrl, init, kind) {
     const gap = this.gaps[kind];
+    let { state, day } = this.#checkpoint(kind); // refuses at once if blocked, capped or stopped
     const wait = state.lastRequestAt + gap.base + this.random() * gap.jitter - this.now();
-    if (state.lastRequestAt && wait > 0) await this.sleep(wait);
+    if (state.lastRequestAt && wait > 0) {
+      await this.sleep(wait);
+      ({ state, day } = this.#checkpoint(kind)); // things may have changed while we waited
+    }
 
     // Count before sending, so a crash mid-request still counts against the cap.
     state.counts[day][kind] = (state.counts[day][kind] ?? 0) + 1;
@@ -168,6 +232,8 @@ export class PoliteClient {
     try {
       response = await this.fetchImpl(rawUrl, {
         ...init,
+        redirect: 'error', // a redirect would skip the allow-list, pacing and counting
+        signal: init.signal ?? AbortSignal.timeout(this.timeoutMs),
         headers: { ...(init.headers ?? {}), 'User-Agent': this.userAgent },
       });
     } catch (e) {
@@ -182,7 +248,7 @@ export class PoliteClient {
     state.lastRequestAt = this.now(); // measured from the END of the request
     this.#log({ t: new Date(started).toISOString(), url: rawUrl, kind, status: response.status, ms: this.now() - started });
 
-    if (response.status === 429 || response.status === 503) {
+    if (response.status === 429 || response.status === 503 || response.status === 403) {
       const seconds = parseRetryAfter(response.headers.get('retry-after'), this.now()) ?? this.defaultBlockSeconds;
       throw this.#block(state, seconds, `HTTP ${response.status}`);
     }

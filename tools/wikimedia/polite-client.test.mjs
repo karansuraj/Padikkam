@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, unlinkSync, utimesSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -7,6 +7,7 @@ import {
   CapReachedError,
   HttpError,
   PoliteClient,
+  StateCorruptError,
   StoppedError,
   buildUserAgent,
   parseRetryAfter,
@@ -208,5 +209,96 @@ describe('blocks and limits', () => {
     const lines = readFileSync(join(h.dir, 'requests.log'), 'utf8').trim().split('\n');
     expect(lines).toHaveLength(1);
     expect(JSON.parse(lines[0])).toMatchObject({ status: 200, kind: 'api' });
+  });
+});
+
+describe('hardening (from the review)', () => {
+  const statePath = (h) => join(h.dir, 'state.json');
+  const editState = (h, change) => {
+    const s = JSON.parse(readFileSync(statePath(h), 'utf8'));
+    change(s);
+    writeFileSync(statePath(h), JSON.stringify(s));
+  };
+
+  it('refuses to run when state.json is corrupt (fail closed), but a missing file is fine', async () => {
+    const h = harness();
+    await h.make().request(API);
+    writeFileSync(statePath(h), 'not json{');
+    await expect(h.make().request(API)).rejects.toBeInstanceOf(StateCorruptError);
+    expect(h.calls).toHaveLength(1);
+  });
+
+  it('re-reads the state after the pause: a block written meanwhile by another process stops the request', async () => {
+    const h = harness();
+    await h.make().request(API);
+    const c = h.make({
+      sleep: async (ms) => {
+        h.sleeps.push(ms);
+        editState(h, (s) => (s.blockedUntil = h.now() + 1_000_000));
+      },
+    });
+    await expect(c.request(API)).rejects.toBeInstanceOf(BlockedError);
+    expect(h.calls).toHaveLength(1);
+  });
+
+  it('re-checks the STOP file after the pause', async () => {
+    const h = harness();
+    await h.make().request(API);
+    const c = h.make({
+      sleep: async (ms) => {
+        h.sleeps.push(ms);
+        writeFileSync(join(h.dir, 'STOP'), '');
+      },
+    });
+    await expect(c.request(API)).rejects.toBeInstanceOf(StoppedError);
+    expect(h.calls).toHaveLength(1);
+  });
+
+  it('waits while another run holds the lock, then proceeds and releases it', async () => {
+    const h = harness();
+    const lock = join(h.dir, 'lock');
+    writeFileSync(lock, 'other run');
+    const c = h.make({
+      sleep: async (ms) => {
+        h.sleeps.push(ms);
+        if (existsSync(lock)) unlinkSync(lock); // the other run finished
+      },
+    });
+    await c.request(API);
+    expect(h.sleeps.length).toBeGreaterThan(0);
+    expect(h.sleeps[0]).toBeLessThanOrEqual(1000);
+    expect(h.calls).toHaveLength(1);
+    expect(existsSync(lock)).toBe(false);
+  });
+
+  it('takes over a stale lock left by a crashed run', async () => {
+    const h = harness();
+    const lock = join(h.dir, 'lock');
+    writeFileSync(lock, 'crashed');
+    const anHourAgo = new Date(Date.now() - 3600_000);
+    utimesSync(lock, anHourAgo, anHourAgo);
+    await h.make().request(API);
+    expect(h.calls).toHaveLength(1);
+    expect(existsSync(lock)).toBe(false);
+  });
+
+  it('releases the lock even when the request fails', async () => {
+    const h = harness({ statuses: [{ status: 404 }] });
+    await expect(h.make().request(API)).rejects.toBeInstanceOf(HttpError);
+    expect(existsSync(join(h.dir, 'lock'))).toBe(false);
+  });
+
+  it('stops on the first 403 (an outright block), not after three', async () => {
+    const h = harness({ statuses: [{ status: 403 }] });
+    await expect(h.make().request(API)).rejects.toBeInstanceOf(BlockedError);
+    await expect(h.make().request(API)).rejects.toBeInstanceOf(BlockedError);
+    expect(h.calls).toHaveLength(1);
+  });
+
+  it('does not follow redirects and sets a timeout', async () => {
+    const h = harness();
+    await h.make().request(API);
+    expect(h.calls[0].init.redirect).toBe('error');
+    expect(h.calls[0].init.signal).toBeDefined();
   });
 });

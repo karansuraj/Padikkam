@@ -1,0 +1,17 @@
+# Malayalam lexemes with pronunciation audio AND an English gloss, one row per (form, audio file).
+# Page 3 of N: rows 4000-5999, ordered by lexeme id so pages are stable.
+# Q36236 = Malayalam, P443 = pronunciation audio.
+SELECT ?l ?lemma ?cat ?rep ?audio (GROUP_CONCAT(DISTINCT ?d; SEPARATOR = " | ") AS ?glosses) WHERE {
+  ?l dct:language wd:Q36236 ;
+     wikibase:lemma ?lemma ;
+     wikibase:lexicalCategory ?cat ;
+     ontolex:lexicalForm ?f ;
+     ontolex:sense ?s .
+  ?f wdt:P443 ?audio ;
+     ontolex:representation ?rep .
+  ?s skos:definition ?d .
+  FILTER(LANG(?d) = "en")
+}
+GROUP BY ?l ?lemma ?cat ?rep ?audio
+ORDER BY ?l ?audio
+LIMIT 2000 OFFSET 4000
