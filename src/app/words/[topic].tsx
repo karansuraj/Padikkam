@@ -6,6 +6,7 @@ import type { Entry } from '../../core/types';
 import { AUDIO } from '../../data/audio';
 import { TOPICS, VOCAB_BY_ID } from '../../data/vocab';
 import { useLetterAudio } from '../../hooks/useLetterAudio';
+import { colors } from '../../theme';
 
 export default function TopicScreen() {
   const { topic } = useLocalSearchParams<{ topic: string }>();
@@ -16,7 +17,7 @@ export default function TopicScreen() {
     return (
       <View style={styles.center}>
         <Text style={styles.title}>Topic not found</Text>
-        <PressableScale style={styles.dark} onPress={() => router.dismissTo('/words')}>
+        <PressableScale style={styles.dark} deferPress onPress={() => router.dismissTo('/words')}>
           <Text style={styles.darkText}>Back to topics</Text>
         </PressableScale>
       </View>
@@ -57,12 +58,21 @@ const styles = StyleSheet.create({
   heading: { fontSize: 22, fontWeight: '700', marginBottom: 8 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 14 },
   title: { fontSize: 20, fontWeight: '700' },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center', alignSelf: 'stretch' },
-  darkText: { color: '#fff', fontWeight: '600' },
-  row: { flexDirection: 'row', alignItems: 'center', borderRadius: 12, borderWidth: 1, borderColor: '#ccc', padding: 14, gap: 12 },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center', alignSelf: 'stretch' },
+  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.tint,
+    padding: 14,
+    gap: 12,
+  },
   text: { flex: 1, gap: 2 },
-  ml: { fontSize: 26 },
-  roman: { fontSize: 16 },
-  en: { fontSize: 14, opacity: 0.7 },
-  play: { fontSize: 14, fontWeight: '600', color: '#2b6cb0' },
+  ml: { fontSize: 26, color: colors.text },
+  roman: { fontSize: 16, color: colors.text },
+  en: { fontSize: 14, color: colors.textMuted },
+  play: { fontSize: 14, fontWeight: '600', color: colors.link },
 });

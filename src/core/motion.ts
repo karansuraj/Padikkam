@@ -5,7 +5,14 @@ export const PRESS = {
   /** Scale while a pressable is held down. */
   scale: 0.96,
   /** Opacity multiplier while held down (applied on top of any base opacity). */
-  opacity: 0.82,
+  opacity: 0.9,
+  /** How far a raised button sinks, in px, while held down. */
+  sink: 2,
+  /**
+   * How long a navigating button waits before running its action, so the release animation
+   * is seen before a heavy screen mounts and holds up the UI thread.
+   */
+  deferMs: 90,
   /** Press-in time for both scale and opacity. */
   inMs: 80,
   /** Opacity return time on release. */
@@ -31,17 +38,24 @@ export const REACTION = {
   shakeStepMs: 45,
 } as const;
 
+/** Resting and pressed look of a raised (shadowed) button. */
+export const RAISED = {
+  elevation: 4,
+  pressedElevation: 1,
+} as const;
+
 export interface PressTargets {
   scale: number;
+  sink: number;
 }
 
 /**
- * Target scale while pressed. With reduced motion it stays at 1 (no movement); the opacity
- * change, which is not motion, still applies via `pressedOpacity`.
+ * Target scale and downward sink while pressed. With reduced motion both stay at rest (no
+ * movement); the opacity change, which is not motion, still applies via `pressedOpacity`.
  */
 export function pressTargets(reduceMotion: boolean, pressedScale: number = PRESS.scale): PressTargets {
   const scale = reduceMotion ? 1 : Math.min(1, Math.max(0.8, pressedScale));
-  return { scale };
+  return { scale, sink: reduceMotion ? 0 : PRESS.sink };
 }
 
 /** Opacity range for a pressable whose resting opacity is `base` (for example 0.4 when dimmed). */

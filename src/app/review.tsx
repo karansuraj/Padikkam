@@ -10,14 +10,15 @@ import { getAllCardStates, saveCardState } from '../data/db';
 import { SEED } from '../data/seed';
 import { VOCAB } from '../data/vocab';
 import { useLetterAudio } from '../hooks/useLetterAudio';
+import { colors } from '../theme';
 
 const DECK: Entry[] = [...SEED, ...VOCAB];
 
-const GRADES: { grade: Grade; label: string }[] = [
-  { grade: 'again', label: 'Again' },
-  { grade: 'hard', label: 'Hard' },
-  { grade: 'good', label: 'Good' },
-  { grade: 'easy', label: 'Easy' },
+const GRADES: { grade: Grade; label: string; color: string }[] = [
+  { grade: 'again', label: 'Again', color: colors.again },
+  { grade: 'hard', label: 'Hard', color: colors.hard },
+  { grade: 'good', label: 'Good', color: colors.good },
+  { grade: 'easy', label: 'Easy', color: colors.easy },
 ];
 
 export default function Review() {
@@ -97,8 +98,8 @@ export default function Review() {
       </PressableScale>
       {revealed && (
         <FadeIn style={styles.row}>
-          {GRADES.map(({ grade: g, label }) => (
-            <PressableScale key={g} style={styles.btn} onPress={() => grade(g)}>
+          {GRADES.map(({ grade: g, label, color }) => (
+            <PressableScale key={g} style={[styles.btn, { backgroundColor: color }]} onPress={() => grade(g)}>
               <Text style={styles.btnText}>{label}</Text>
             </PressableScale>
           ))}
@@ -117,21 +118,22 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: colors.border,
+    backgroundColor: colors.tint,
     alignItems: 'center',
     justifyContent: 'center',
     gap: 12,
     padding: 24,
   },
-  ml: { fontSize: 64 },
-  badge: { fontSize: 12, opacity: 0.5, textTransform: 'uppercase' },
-  roman: { fontSize: 24 },
-  en: { fontSize: 18, opacity: 0.8, textAlign: 'center' },
-  hint: { opacity: 0.5 },
+  ml: { fontSize: 64, color: colors.text },
+  badge: { fontSize: 12, color: colors.textMuted, textTransform: 'uppercase' },
+  roman: { fontSize: 24, color: colors.text },
+  en: { fontSize: 18, color: colors.textMuted, textAlign: 'center' },
+  hint: { color: colors.textMuted },
   revealed: { alignItems: 'center', gap: 12 },
-  play: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: '#222' },
-  playText: { color: '#fff', fontWeight: '600' },
+  play: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: colors.primary },
+  playText: { color: colors.onPrimary, fontWeight: '600' },
   row: { flexDirection: 'row', gap: 8 },
-  btn: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center' },
-  btnText: { color: '#fff', fontWeight: '600' },
+  btn: { flex: 1, padding: 14, borderRadius: 10, alignItems: 'center' },
+  btnText: { color: colors.onPrimary, fontWeight: '600' },
 });

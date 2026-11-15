@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { FadeIn } from '../../components/FadeIn';
 import { PressableScale } from '../../components/PressableScale';
+import { colors } from '../../theme';
 import { AUDIO } from '../../data/audio';
 import { TOPICS, VOCAB_BY_ID } from '../../data/vocab';
 
@@ -18,7 +19,7 @@ export default function Words() {
             return !!audio && AUDIO[audio] !== undefined;
           }).length;
           return (
-            <PressableScale key={t.id} style={styles.row} onPress={() => router.push(`/words/${t.id}`)}>
+            <PressableScale key={t.id} style={styles.row} deferPress onPress={() => router.push(`/words/${t.id}`)}>
               <View style={styles.rowText}>
                 <Text style={styles.title}>{t.title}</Text>
                 <Text style={styles.sub}>{`${t.entryIds.length} words${withAudio > 0 ? `, ${withAudio} with audio` : ''}`}</Text>
@@ -35,8 +36,8 @@ const styles = StyleSheet.create({
   fill: { flex: 1 },
   container: { padding: 20, gap: 10, paddingBottom: 40 },
   intro: { fontSize: 14, opacity: 0.7, marginBottom: 6 },
-  row: { borderRadius: 12, borderWidth: 1, borderColor: '#ccc', padding: 16 },
+  row: { borderRadius: 12, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.tint, padding: 16 },
   rowText: { gap: 4 },
-  title: { fontSize: 17, fontWeight: '600' },
-  sub: { fontSize: 13, opacity: 0.6 },
+  title: { fontSize: 17, fontWeight: '600', color: colors.text },
+  sub: { fontSize: 13, color: colors.textMuted },
 });

@@ -3,6 +3,7 @@ import { useCallback, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { FadeIn } from '../components/FadeIn';
 import { PressableScale } from '../components/PressableScale';
+import { colors } from '../theme';
 import { QuizView } from '../components/QuizView';
 import { buildPracticeQuiz, scoreQuiz } from '../core/lesson';
 import { seededRng, type Question } from '../core/quiz';
@@ -61,7 +62,7 @@ export default function Practice() {
         <Text style={styles.sub}>
           Practice covers letters from lessons you have passed, once they are due again.
         </Text>
-        <PressableScale style={styles.dark} onPress={() => router.replace('/letters')}>
+        <PressableScale style={styles.dark} deferPress onPress={() => router.replace('/letters')}>
           <Text style={styles.darkText}>Go to Letters</Text>
         </PressableScale>
       </FadeIn>
@@ -90,8 +91,8 @@ export default function Practice() {
       <PressableScale style={styles.dark} onPress={start}>
         <Text style={styles.darkText}>Practise again</Text>
       </PressableScale>
-      <PressableScale style={styles.light} onPress={() => router.dismissTo('/')}>
-        <Text>Home</Text>
+      <PressableScale style={styles.light} deferPress onPress={() => router.dismissTo('/')}>
+        <Text style={styles.lightText}>Home</Text>
       </PressableScale>
     </FadeIn>
   );
@@ -101,7 +102,16 @@ const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 14 },
   title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
   sub: { fontSize: 16, opacity: 0.7, textAlign: 'center' },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center', alignSelf: 'stretch' },
-  darkText: { color: '#fff', fontWeight: '600' },
-  light: { padding: 14, borderRadius: 10, borderWidth: 1, borderColor: '#ccc', alignItems: 'center', alignSelf: 'stretch' },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center', alignSelf: 'stretch' },
+  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  light: {
+    padding: 14,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+    alignSelf: 'stretch',
+  },
+  lightText: { color: colors.text, fontWeight: '600' },
 });

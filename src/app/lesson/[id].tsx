@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { PressableScale } from '../../components/PressableScale';
 import { QuizView } from '../../components/QuizView';
+import { colors } from '../../theme';
 import { buildLessonQuiz, scoreQuiz, unlockedLessonIds } from '../../core/lesson';
 import { seededRng, type Question } from '../../core/quiz';
 import { LESSONS } from '../../data/lessons';
@@ -105,7 +106,7 @@ export default function LessonScreen() {
             disabled={step === 0}
             onPress={() => setStep(step - 1)}
           >
-            <Text>Back</Text>
+            <Text style={styles.lightText}>Back</Text>
           </PressableScale>
           <PressableScale style={styles.darkFlex} onPress={() => (last ? startQuiz() : setStep(step + 1))}>
             <Text style={styles.darkText}>{last ? 'Start quiz' : 'Next'}</Text>
@@ -140,12 +141,12 @@ export default function LessonScreen() {
         </PressableScale>
       )}
       {result?.passed && nextLesson && (
-        <PressableScale style={styles.dark} onPress={() => router.replace(`/lesson/${nextLesson.id}`)}>
+        <PressableScale style={styles.dark} deferPress onPress={() => router.replace(`/lesson/${nextLesson.id}`)}>
           <Text style={styles.darkText}>{`Next: ${nextLesson.title}`}</Text>
         </PressableScale>
       )}
-      <PressableScale style={styles.light} onPress={() => router.dismissTo('/letters')}>
-        <Text>Back to lessons</Text>
+      <PressableScale style={styles.light} deferPress onPress={() => router.dismissTo('/letters')}>
+        <Text style={styles.lightText}>Back to lessons</Text>
       </PressableScale>
     </ScrollView>
   );
@@ -169,10 +170,18 @@ const styles = StyleSheet.create({
   roman: { fontSize: 28 },
   en: { fontSize: 16, opacity: 0.8, textAlign: 'center' },
   row: { flexDirection: 'row', gap: 10 },
-  dark: { padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center' },
-  darkFlex: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: '#222', alignItems: 'center' },
-  darkText: { color: '#fff', fontWeight: '600' },
-  light: { padding: 14, borderRadius: 10, borderWidth: 1, borderColor: '#ccc', alignItems: 'center' },
+  dark: { padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
+  darkFlex: { flex: 1, padding: 14, borderRadius: 10, backgroundColor: colors.primary, alignItems: 'center' },
+  darkText: { color: colors.onPrimary, fontWeight: '600' },
+  light: {
+    padding: 14,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+  },
+  lightText: { color: colors.text, fontWeight: '600' },
   disabled: { opacity: 0.4 },
   result: { padding: 20, gap: 14, alignItems: 'stretch' },
   resultTitle: { fontSize: 26, fontWeight: '700', textAlign: 'center', marginTop: 24 },
