@@ -5,7 +5,8 @@ import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from '
 import { basename, dirname, join } from 'node:path';
 
 const BATCH = 10;
-const STOP_ERRORS = new Set(['BlockedError', 'CapReachedError', 'StoppedError']);
+// Errors that end the whole run (anything that says stop, or that means no request can be made at all).
+const STOP_ERRORS = new Set(['BlockedError', 'CapReachedError', 'StoppedError', 'StateCorruptError', 'LockTimeoutError']);
 
 const extOf = (file) => file.split('.').pop().toLowerCase();
 

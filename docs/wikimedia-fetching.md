@@ -21,7 +21,7 @@ No ad-hoc `curl`, no one-off scripts, no direct `fetch`.
 - Only one process at a time (a lock file in the state folder); state is re-read after every pause, so a block or STOP written meanwhile is honoured. A corrupt `state.json` stops the run rather than resetting the protections.
 - First 429, 503 or 403: it stops, saves `Retry-After` (plus a margin), and makes no request, even from a new run, until that time. It never retries a 429.
 - Three server errors or network errors in a row also stop everything for 15 minutes plus margin.
-- Daily caps (UTC): 100 API requests and 150 downloads.
+- Daily caps (UTC): 100 API requests and 400 downloads. These are totals, not a pace; the one-at-a-time spacing is unchanged. (The download cap was 150 until 2026-11-15, raised at the owner's request so the remaining clips fit in one run.)
 - Create a file named `.wikimedia-cache/state/STOP` to halt everything at once.
 - Redirects are not followed, and each request times out after 60 s.
 - Only https, only these hosts: commons.wikimedia.org, upload.wikimedia.org, query.wikidata.org, www.wikidata.org, lingualibre.org.

@@ -7,7 +7,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { loadContact } from './contact.mjs';
 import { fetchAll, planDownloads } from './audio-plan.mjs';
-import { PoliteClient } from './polite-client.mjs';
+import { DEFAULTS, PoliteClient } from './polite-client.mjs';
 
 const ROOT = fileURLToPath(new URL('../../', import.meta.url));
 const CACHE = `${ROOT}.wikimedia-cache`;
@@ -32,7 +32,7 @@ if (!go) {
   const cache = existsSync(META) ? JSON.parse(readFileSync(META, 'utf8')) : {};
   const uncached = [...new Set(todo.map((i) => i.commonsFile))].filter((f) => !(f in cache)).length;
   const apiBatches = Math.ceil(uncached / 10);
-  const perDay = 150;
+  const perDay = DEFAULTS.dailyCaps.download;
   const seconds = apiBatches * 7 + todo.length * 16; // ~6.5 s API gap, ~15 s download gap, plus transfer time
   console.log(
     [
@@ -51,6 +51,13 @@ if (!go) {
 }
 
 const client = new PoliteClient({ contact: loadContact(ROOT), dir: `${CACHE}/state` });
+// Ctrl-C or a kill must not leave the lock behind (the next run would wait for it to go stale).
+for (const signal of ['SIGINT', 'SIGTERM']) {
+  process.on(signal, () => {
+    client.releaseLock();
+    process.exit(130);
+  });
+}
 const result = await fetchAll({ client, vocab, destDir: DEST, manifestPath: MANIFEST, metaPath: META, limit });
 console.log(JSON.stringify(result, null, 2));
 if (result.stoppedBy) {

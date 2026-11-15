@@ -32,7 +32,9 @@ const HOST_KIND = {
 
 export const DEFAULTS = {
   gaps: { api: { base: 5000, jitter: 3000 }, download: { base: 12000, jitter: 6000 } },
-  dailyCaps: { api: 100, download: 150 },
+  // Daily totals, not a pace: requests are still one at a time, 5-8 s (API) or 12-18 s (downloads) apart.
+  // 400 downloads is about 100 minutes at that pace. Raised from 150 on 2026-11-15 at the owner's request.
+  dailyCaps: { api: 100, download: 400 },
   failureLimit: 3,
   defaultBlockSeconds: 900,
 };
@@ -54,6 +56,12 @@ export class StoppedError extends Error {
   constructor() {
     super('STOP file present. Remove it to continue.');
     this.name = 'StoppedError';
+  }
+}
+export class LockTimeoutError extends Error {
+  constructor() {
+    super('Another run has held the lock for too long. Not making any request.');
+    this.name = 'LockTimeoutError';
   }
 }
 export class StateCorruptError extends Error {
@@ -122,6 +130,7 @@ export class PoliteClient {
     this.lockStaleMs = lockStaleMs;
     this.lockWaitMs = lockWaitMs;
     this.chain = Promise.resolve();
+    this.heldLock = null;
     mkdirSync(dir, { recursive: true });
   }
 
@@ -167,7 +176,7 @@ export class PoliteClient {
           continue;
         }
       } catch {}
-      if (Date.now() - started > this.lockWaitMs) throw new Error('Another run holds the lock for too long. Not making any request.');
+      if (Date.now() - started > this.lockWaitMs) throw new LockTimeoutError();
       await this.sleep(500);
     }
   }
@@ -204,14 +213,22 @@ export class PoliteClient {
     if (!kind) throw new Error(`Host not on the Wikimedia allow-list: ${url.hostname}`);
 
     if (existsSync(join(this.dir, 'STOP'))) throw new StoppedError();
-    const lock = await this.#acquireLock();
+    this.heldLock = await this.#acquireLock();
     try {
       return await this.#locked(rawUrl, init, kind);
     } finally {
-      try {
-        unlinkSync(lock);
-      } catch {}
+      this.releaseLock();
     }
+  }
+
+  /** Free the lock if this process holds it (also called on Ctrl-C so the next run does not wait). */
+  releaseLock() {
+    const lock = this.heldLock;
+    this.heldLock = null;
+    if (!lock) return;
+    try {
+      unlinkSync(lock);
+    } catch {}
   }
 
   async #locked(rawUrl, init, kind) {

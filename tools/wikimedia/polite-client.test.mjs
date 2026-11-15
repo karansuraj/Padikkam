@@ -6,6 +6,7 @@ import {
   BlockedError,
   CapReachedError,
   HttpError,
+  LockTimeoutError,
   PoliteClient,
   StateCorruptError,
   StoppedError,
@@ -300,5 +301,39 @@ describe('hardening (from the review)', () => {
     await h.make().request(API);
     expect(h.calls[0].init.redirect).toBe('error');
     expect(h.calls[0].init.signal).toBeDefined();
+  });
+});
+
+describe('lock cleanup and timeout (from the final review)', () => {
+  it('releaseLock frees the lock this process holds, so a Ctrl-C does not leave the next run waiting', async () => {
+    const h = harness();
+    await h.make().request(API);
+    const lock = join(h.dir, 'lock');
+    let c;
+    c = h.make({
+      sleep: async (ms) => {
+        h.sleeps.push(ms);
+        expect(existsSync(lock)).toBe(true); // we hold it during the pause
+        c.releaseLock();
+        expect(existsSync(lock)).toBe(false);
+      },
+    });
+    await c.request(API); // finishes normally; the final release is a harmless no-op
+    expect(existsSync(lock)).toBe(false);
+  });
+
+  it('releaseLock never removes a lock this process does not hold', () => {
+    const h = harness();
+    const lock = join(h.dir, 'lock');
+    writeFileSync(lock, 'someone else');
+    h.make().releaseLock();
+    expect(existsSync(lock)).toBe(true);
+  });
+
+  it('gives up with LockTimeoutError when another run holds the lock for too long', async () => {
+    const h = harness();
+    writeFileSync(join(h.dir, 'lock'), 'someone else');
+    await expect(h.make({ lockWaitMs: -1 }).request(API)).rejects.toBeInstanceOf(LockTimeoutError);
+    expect(h.calls).toHaveLength(0);
   });
 });
